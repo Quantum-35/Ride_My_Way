@@ -490,3 +490,115 @@ td, th {
 tr:nth-child(even) {
     background-color: #dddddd;
 }
+/*My SigUp Modal*/
+.modal {
+    display: none;
+    /* Hidden by default */
+    position: fixed;
+    /* Stay in place */
+    z-index: 1;
+    /* Sit on top */
+    padding-top: 10px;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #282a2eb3;
+    overflow: auto;
+    
+}
+hr {
+    border: 1px solid #f1f1f1;
+    margin-bottom: 25px;
+}
+/* Clear floats */
+
+.clearfix::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+
+/* Modal Content */
+.modal-content {
+    margin: auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 40%;
+    color: #fff;
+    background-color: #1a1818cd;
+}
+
+/* The Close Button */
+
+.close {
+    color: #aaaaaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+}
+/*Close Sign up*/
+.Close {
+    color: #aaaaaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.Close:hover,
+.Close:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+}
+.modalHeader{
+    text-align: center;
+    font-weight: 400;
+    font-size: 130%;
+    text-decoration: underline;
+}
+.modalForm{
+    display: block;
+    padding: 10px;
+    margin-left: 10%;
+}
+.modalForm input{
+    width: 90%;
+    height: 40px;
+    border-radius: 5px;
+    margin-bottom: 2%;
+    font-size: 20px;
+}
+.btn-model-detail{
+    background-color: #4CAF50;
+    width: 100px;
+    margin-left: 20%;
+    margin-top: 5px;
+    padding: 5px;
+    font-size: 20px;
+    color: #ddd;
+}
+/* Full-width input fields */
+
+.modalForm input {
+    width: 100%;
+    padding: 15px;
+    margin: 5px 0 22px 0;
+    display: inline-block;
+    border: none;
+    background: #f1f1f1;
+}
+
+/* Add a background color when the inputs get focus */
+
+.modalForm input:focus {
+    background-color: #ddd;
+    outline: none;
+}

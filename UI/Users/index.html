@@ -50,31 +50,91 @@
         
         </div>
         <section>
-            <h2 style="text-align: center; margin-bottom: 20px;">Available Offers</h2><hr>
+            <h2 style="text-align: center; margin-bottom: 20px;">Available Ride Offers</h2><hr>
             <button class="view_offers_button" onclick="location.href='./ride-offers.html'">View my Rides Offers</button>
             <div class="user_card">
-                <img src="./assets/images/car7.jpg" alt="Avatar" style="width:100%">
+                <img src="./assets/images/car7.jpg" alt="Avatar" style="width:100%;height: 200px;">
                 <div class="user_container">
                     <p>Toyotta Model 2017<br> Depature: 7.20am</p>
-                    <button class="btn-cards">Details</button> 
-                    <button class="btn-cards">Join</button> 
+                    <button class="btn-cards" id="detail_model">Details</button> 
+                    <button class="btn-cards" onclick="alert('Thank You for Choosing this Car')">Join</button> 
                 </div>
-             </div>
+             </div> 
              <div class="user_card1">
-                    <img src="./assets/images/car7.jpg" alt="Avatar" style="width:100%">
+                    <img src="./assets/images/car8.jpg" alt="Avatar" style="width:100%; height: 200px;">
                     <div class="user_container">
-                        <p>Toyotta Model 2017<br> Depature: 7.20am</p>
-                        <button class="btn-cards">Details</button> 
-                        <button class="btn-cards">Join</button> 
+                        <p>Nissan Model 2017<br> Depature: 7.20am</p>
+                        <button class="btn-cards" id="detail_model_sec">Details</button> 
+                        <button class="btn-cards" onclick="alert('Thank you For choosing this car')">Join</button> 
                     </div>
             </div>
             <div class="user_card2">
-                    <img src="./assets/images/car7.jpg" alt="Avatar" style="width:100%">
+                    <img src="./assets/images/car9g.jpg" alt="Avatar" style="width:100%; height: 200px;">
                     <div class="user_container">
-                        <p>Toyotta Model 2017<br> Depature: 7.20am</p>
-                        <button class="btn-cards">Details</button> 
-                        <button class="btn-cards">Join</button> 
+                        <p>Subaru Japan  Made 2017<br> Depature: 7.20am</p>
+                        <button class="btn-cards" id="detail_model_thir">Details</button> 
+                        <button class="btn-cards" onclick="alert('Thank you for choosing this car')">Join</button> 
                     </div>
+            </div>
+            <div id='modal_details' class="modal">
+                
+                <div class="modal-content">
+                    <span class="close" id="detail_close">&times</span>
+                    <div class="modalHeader">Car Details</div><br>
+                    <img src="./assets/images/car7.jpg" alt="Avatar" style="width:100%;height: 300px;">
+                     
+                     <div style="margin-left: 20%;">
+                        <h3>Car Details</h3>
+                        <h4>Model: Toyota Fielder 2017</h4>
+                        <h4>Depature time: 7.20 am</h4>
+                        <h4>Origin: Nairobi</h4>
+                        <h4>Destination: Nakuru</h4>
+                        <h4>Driver Name: John Kinyanjui</h4>
+                        <button class="btn-model-detail">
+                            Join Ride
+                        </button>
+                     </div>
+                </div>
+            </div>
+            <div id='modal_details_sec' class="modal">
+                
+                <div class="modal-content">
+                    <span class="close" id="detail_close_sec">&times</span>
+                    <div class="modalHeader">Car Details</div><br>
+                    <img src="./assets/images/car8.jpg" alt="Avatar" style="width:100%;height: 300px;">
+                     
+                     <div style="margin-left: 20%;">
+                        <h3>Car Details</h3>
+                        <h4>Model: Nissan  2017</h4>
+                        <h4>Depature time: 7.20 am</h4>
+                        <h4>Origin: Nairobi</h4>
+                        <h4>Destination: Nakuru</h4>
+                        <h4>Driver Name: Mike James</h4>
+                        <button class="btn-model-detail">
+                            Join Ride
+                        </button>
+                     </div> 
+                </div>
+            </div>
+            <div id='modal_details_thir' class="modal">
+                
+                <div class="modal-content">
+                    <span class="close" id="detail_close_thir">&times</span>
+                    <div class="modalHeader">Car Details</div><br>
+                    <img src="./assets/images/car9g.jpg" alt="Avatar" style="width:100%;height: 300px;">
+                     
+                     <div style="margin-left: 20%;">
+                        <h3>Car Details</h3>
+                        <h4>Model: Subaru Japan 2018</h4>
+                        <h4>Depature time: 7.20 am</h4>
+                        <h4>Origin: Nairobi</h4>
+                        <h4>Destination: Nakuru</h4>
+                        <h4>Driver Name: Alex Troval</h4>
+                        <button class="btn-model-detail">
+                            Join Ride
+                        </button>
+                     </div> 
+                </div>
             </div>
         </section>
         <footer class="footer">
@@ -97,8 +157,38 @@
        }
     </script>
     <script>
-       
-        
+            var detail_model = document.getElementById('detail_model')
+            var modal_details = document.getElementById('modal_details')
+            var detail_close = document.getElementById('detail_close')
+
+            detail_model.onclick = function(){
+                modal_details.style.display = 'block';
+            }
+            detail_close.onclick = function (){
+                modal_details.style.display = 'none';
+            }
+            
+            var detail_model_sec = document.getElementById('detail_model_sec')
+            var modal_details_sec = document.getElementById('modal_details_sec')
+            var detail_close_sec = document.getElementById('detail_close_sec')
+            detail_model_sec.onclick = function (){
+                modal_details_sec.style.display = 'block';
+            }
+            detail_close_sec.onclick = function (){
+                modal_details_sec.style.display = 'none'; 
+            }
+            
+            var detail_model_thir = document.getElementById('detail_model_thir')
+            var modal_details_thir = document.getElementById('modal_details_thir')
+            var detail_close_thir = document.getElementById('detail_close_thir')
+            detail_model_thir.onclick = function () {
+                modal_details_thir.style.display = 'block';
+            }
+            detail_close_thir.onclick = function (){
+                modal_details_thir.style.display = 'none';
+            }
+
+
             var modal = document.getElementById('myModal');
 
             var btn = document.getElementById("myBtn");
@@ -132,6 +222,15 @@
                 if (event.target == modal) {
                     modal.style.display = "none";
                     console.log('Hello')
+                }
+                if (event.target == modal_details){
+                    modal_details.style.display = 'none';
+                }
+                if (event.target == modal_details_sec){
+                    modal_details_sec.style.display = 'none';
+                }
+                if (event.target == modal_details_thir){
+                    modal_details_thir.style.display = 'none';
                 }
             }
             $(document).ready(function () {
