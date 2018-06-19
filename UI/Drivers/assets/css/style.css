@@ -67,61 +67,18 @@ body {
     margin: 6px 0;
     transition: 0.4s;
 }
-.card1{
-    background-color: rgba(34, 107, 171, 0.947);
+
+.btn-new-ride {
+    background-color: rgba(25, 115, 204, 0.947);
     width: 200px;
-    height: 150px;
-    position: absolute;
-    top: 10%;
-    left: 20%;
-    text-align: center;
-    color: #fff;
-    padding: 10px;
-}
-.card2 {
-    background-color: rgba(227, 230, 233, 0.947);
-    width: 200px;
-    height: 150px;
-    position: absolute;
-    top: 10%;
-    left: 40%;
-    text-align: center;
-    color: rgb(11, 10, 10);
-    padding: 10px;
-}
-.card3 {
-    background-color: rgba(34, 107, 171, 0.947);
-    width: 200px;
-    height: 150px;
-    position: absolute;
-    top: 10%;
-    left: 60%;
-    text-align: center;
-    color: #fff;
-    padding: 10px;
-}
-.card4 {
-    background-color: rgba(227, 230, 233, 0.947)rg;
-    width: 200px;
-    height: 150px;
+    height: 60px;
     position: absolute;
     top: 10%;
     left: 80%;
     text-align: center;
-    color: rgb(11, 10, 10);
-    padding: 10px;
-}
-.btn-new-ride {
-    background-color: rgba(25, 115, 204, 0.947);
-    width: 200px;
-    height: 150px;
-    position: absolute;
-    top: 40%;
-    left: 40%;
-    text-align: center;
     font-size: 20px;
     color:#fff;
-    border-radius: 15%;
+    border-radius: 10%;
     padding: 10px;
     transition: 0.3s;
     box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
@@ -440,4 +397,133 @@ hr {
 }
 .submit_btn:hover{
     opacity: 1;
+}
+.header_btn{
+    position: absolute;
+    top: 25%;
+    left: 21%;
+    width: 78%;
+    border: 1px solid gray;
+}
+/* Menu item css */
+.my-nav-custom {
+    -webkit-box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+    -moz-box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+    margin-top: 5%;
+    margin-left: 20%;
+}
+.menu-item {
+    background: #fff;
+    padding:0px 10px;
+}
+.menu-item h4 {
+    color: #fff;
+    font-size: 25px;
+    font-weight: 500;
+    padding: 7px 12px;
+    background: #14a00c;
+}
+.menu-item h4 a {
+  color: white;
+  display: block;
+  text-decoration: none;
+}
+.menu-item h4 {
+    border-bottom: 1px solid rgba(0, 0, 0, 0.3);
+    border-top: 1px solid rgba(255, 255, 255, 0.2);
+    color: #fff;
+    font-size: 25px;
+    font-weight: 500;
+    padding: 7px 12px;
+    /*Gradient*/
+    background: #198ae1;
+}
+.menu-item h4:hover {
+    background: #0ec6d3;
+}
+.alpha p {
+    font-size: 13px;
+    padding: 8px 12px;
+    color: #aaa;
+}
+/*ul Styles*/
+.menu-item ul {
+  background: #fff;
+  font-size: 13px;
+  line-height: 30px;
+  list-style-type: none;
+  overflow: hidden;
+  padding: 0px;
+}
+ 
+.menu-item ul a {
+  margin-left: 20px;
+  text-decoration: none;
+  color: #aaa;
+  display: block;
+}
+ 
+/*li Styles*/
+.menu-item li {
+  border-bottom: 1px solid #eee;
+}
+ 
+.menu-item li:hover {
+  background: #eee;
+}
+.menu-item ul {
+    background: #fff;
+    font-size: 13px;
+    line-height: 30px;
+    height: 0px;
+    /*Collapses the menu*/
+    list-style-type: none;
+    overflow: hidden;
+    padding: 0px;
+}
+.menu-item ul {
+    background: #fff;
+    font-size: 13px;
+    line-height: 30px;
+    height: 0px;
+    list-style-type: none;
+    overflow: hidden;
+    padding: 0px;
+    /*Animation*/
+    -webkit-transition: height 1s ease;
+    -moz-transition: height 1s ease;
+    -o-transition: height 1s ease;
+    -ms-transition: height 1s ease;
+    transition: height 1s ease;
+}
+.menu-item:hover ul {
+    height: 93px;
+}
+#customers {
+    font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+}
+
+#customers td,
+#customers th {
+    border: 1px solid #ddd;
+    padding: 5px;
+}
+
+#customers tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+#customers tr:hover {
+    background-color: #ddd;
+}
+
+#customers th {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: left;
+    background-color: rgb(206, 115, 11);
+    color: white;
 }
