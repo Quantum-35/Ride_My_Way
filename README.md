@@ -16,6 +16,11 @@ You need to have the Following before getting Started
 ### Installation
 Download the Latest Version of Google chrome [here](https://chrome.en.softonic.com/download) and follow the installation instruction
 Download the Latest Version of Visual studio [here](https://code.visualstudio.com/download) and follow the installation instruction
+## What to do
+```
+1.Clone this repo and git checkout to feature-develop
+2.Open any index.html file on your browser
+```
 ## Features
 One can signup as a passenger or driver
 
