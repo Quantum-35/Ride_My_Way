@@ -1,0 +1,604 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+body {
+    background-image: rgba(227, 230, 233, 0.947);
+    height: 100vh;
+    color: #555;
+    font-size: 20px;
+    font-weight: 400;
+}
+.logo{
+    height: 100px;
+    border-radius: 200%;
+}
+.myTopNav{
+    background-color: rgba(0, 102, 255, 0.735);
+    height: 8%;
+}
+.main-nav {
+    float: right;
+    list-style: none;
+    margin-right: 20%;
+    margin-top: 1%;
+}
+
+.main-nav li {
+    display: inline-block;
+    margin-left: 40px;
+}
+
+.main-nav input {
+    display: inline-block;
+    margin-left: 30px;
+    margin-right: 15%;
+}
+
+.main-nav li a:link,
+.main-nav li a:visited {
+    color: #fff;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 90%;
+    border-bottom: 2px solid transparent;
+    transition: border-bottom 0.5s;
+}
+.main-nav li a:hover,
+.main-nav li a:active {
+    color: rgb(244, 234, 133);
+    /* background-color: rgb(216, 159, 14); */
+    border-bottom: 2px solid #E67E22;
+}
+.btside-nav{
+    position: absolute;
+    left: 90%;
+    top: 2%;
+    cursor: pointer;
+}
+.bar1,
+.bar2,
+.bar3 {
+    width: 35px;
+    height: 5px;
+    background-color: #333;
+    margin: 6px 0;
+    transition: 0.4s;
+}
+
+.btn-new-ride {
+    background-color: rgba(25, 115, 204, 0.947);
+    width: 200px;
+    height: 60px;
+    position: absolute;
+    top: 10%;
+    left: 80%;
+    text-align: center;
+    font-size: 20px;
+    color:#fff;
+    border-radius: 10%;
+    padding: 10px;
+    transition: 0.3s;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+}
+.btn-new-ride:hover {
+    box-shadow: 0 8px 16px 0 rgba(179, 13, 201, 0.2);
+    background-color: rgb(43, 65, 83);
+
+}
+/* The Side Nav  */
+
+.side-nav {
+    display: none;
+    position: fixed;
+    padding-top: 100px;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+}
+/* Side Content */
+.side-content {
+    background-color: #fefefe;
+    margin: auto;
+    width: 20%;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+/* The Close Button */
+.close {
+    color: #aaaaaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    padding: 10px;
+}
+
+.close:hover,
+.close:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+}
+.profilePic{
+    width: 100px;
+    height: auto;
+    border-radius: 200%;
+
+}
+.side-bar-image {
+    background-image: url('../images/blue-sky.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    padding: 30px;
+    margin-left: 0px;
+}
+.side-bar-image p{
+    font-size: 20px;
+    color: rgb(247, 245, 245);
+    margin-bottom: 10px;
+}
+.side-bar-links {
+    list-style: none;
+}
+.side-bar-links li{
+    padding: 5px;
+}
+.side-bar-links li a {
+    display: block;
+    color: #000;
+    padding: 8px 16px;
+    text-decoration: none;
+}
+.side-bar-links li a:hover {
+    background-color: #555;
+    color: white;
+}
+.active {
+    background-color: #4CAF50;
+    color: white;
+}
+.side-bar-links li a:hover:not(.active) {
+    background-color: #555;
+    color: white;
+}
+.postImg{
+    height: 50px;
+    margin: 1% 1%;
+    border-radius: 200%;
+    padding: 1%;
+    float: left;
+}
+
+/*CSS PRELOADER*/
+/* Preloader */
+
+#preloader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #fff;
+    /* change if the mask should have another color then white */
+    z-index: 99;
+    /* makes sure it stays on top */
+}
+
+#status {
+    width: 200px;
+    height: 200px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    background-image: url('../images/status.gif');
+    /* path to your loading animation */
+    background-repeat: no-repeat;
+    background-position: center;
+    margin: -100px 0 0 -100px;
+    /* is width and height divided by two */
+}
+
+/*PROGRESS BAR*/
+#progressbar,
+#progressbar1,
+#progressbar2,
+#progressbar3 {
+    background-color: black;
+    border-radius: 13px;
+    padding: 1px;
+    margin-top: 15%;
+}
+#progressbar div {
+    background-color: #fff;
+    width: 40%;
+    height: 5px;
+    border-radius: 10px;
+}
+#progressbar1 div {
+    background-color: #fff;
+    width: 30%;
+    height: 5px;
+    border-radius: 10px;
+}
+#progressbar2 div {
+    background-color: #fff;
+    width: 60%;
+    height: 5px;
+    border-radius: 10px;
+}
+#progressbar3 div {
+    background-color: rgb(15, 45, 215);
+    width: 40%;
+    height: 5px;
+    border-radius: 10px;
+}
+footer{
+    position: absolute;
+    bottom: 0;
+    background-color: #333;
+    width: 100%;
+    text-align: center;
+    height: 9%;
+    color: #fff;
+    padding: 20px;
+}
+.addbtn{
+    bottom: 5px;
+    right: 5px;
+    position: fixed;
+    width: 50px;
+    border-radius: 200px;
+}
+.ulAdd{
+   display: none;
+   list-style: none;
+}
+.pen{
+    position: absolute;
+    top:80%;
+    left: 96%;
+    height: 50px;
+    border-radius: 200%;
+}
+/* Styles for Models */
+/*My SigUp Modal*/
+.modal {
+    display: none;
+    /* Hidden by default */
+    position: fixed;
+    /* Stay in place */
+    z-index: 1;
+    /* Sit on top */
+    padding-top: 10px;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #282a2eb3;
+    overflow: auto;
+    
+}
+hr {
+    border: 1px solid #f1f1f1;
+    margin-bottom: 25px;
+}
+/* Clear floats */
+
+.clearfix::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+
+/* Modal Content */
+.modal-content {
+    margin: auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 40%;
+    color: #fff;
+    background-color: #1a1818cd;
+}
+
+/* The Close Button */
+
+.close {
+    color: #aaaaaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+}
+/*Close Sign up*/
+.Close {
+    color: #aaaaaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.Close:hover,
+.Close:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+}
+.modalHeader{
+    text-align: center;
+    font-weight: 400;
+    font-size: 130%;
+    text-decoration: underline;
+}
+.modalForm{
+    display: block;
+    padding: 10px;
+    margin-left: 10%;
+}
+.modalForm input{
+    width: 90%;
+    height: 40px;
+    border-radius: 5px;
+    margin-bottom: 2%;
+    font-size: 20px;
+}
+.btnSignUp{
+    color: #fff;
+    background-color: #E67E22;
+    border-radius: 5px;
+    width: 80px;
+    height: 30px;
+}
+.btnSignUp:hover{
+    background-color: rgb(194, 225, 133);
+}
+/* Full-width input fields */
+
+.modalForm input {
+    width: 100%;
+    padding: 15px;
+    margin: 5px 0 22px 0;
+    display: inline-block;
+    border: none;
+    background: #f1f1f1;
+}
+
+/* Add a background color when the inputs get focus */
+
+.modalForm input:focus {
+    background-color: #ddd;
+    outline: none;
+}
+
+.submit_btn{
+    background-color: #4CAF50;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+    opacity: 0.9;
+    float: left;
+    margin-left: 20%;
+    text-align: center;
+    width: 50%;
+}
+.submit_btn:hover{
+    opacity: 1;
+}
+.header_btn{
+    position: absolute;
+    top: 25%;
+    left: 21%;
+    width: 78%;
+    border: 1px solid gray;
+}
+.user_card {
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    transition: 0.3s;
+    width: 20%;
+    margin-left: 20%;
+}
+
+.user_card:hover {
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+}
+.user_card1 {
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    transition: 0.3s;
+    width: 20%;
+    position: absolute;
+    left: 45%;
+    top: 28.5%;
+}
+
+.user_card1:hover {
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+}
+.user_card2 {
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    transition: 0.3s;
+    width: 20%;
+    position: absolute;
+    left: 70%;
+    top: 28.5%;
+}
+
+.user_card2:hover {
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+}
+.user_container {
+    padding: 2px 16px;
+}
+.btn-cards {
+    background-color: rgb(17, 145, 17);
+    padding: 5px;
+    font-size: 20;
+    font-weight: bolder;
+    color: #f1f1f1;
+    width: 70px;
+    margin-left: 10%;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    cursor: pointer;
+}
+.btn-cards:hover {
+    cursor: pointer;
+    background-color: #000;
+}
+.view_offers_button{
+    position: absolute;
+    top: 15%;
+    right: 5%;
+    color: #f1f1f1;
+    background-color: #4CAF50;
+    width: 100x;
+    padding: 10px;
+    font-size: 20px;
+    cursor: pointer;
+
+}
+.view_offers_button:hover{
+    background-color: rgb(14, 17, 14);
+    cursor: pointer;
+}
+table {
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 70%;
+    margin-left: 20%;
+}
+
+td, th {
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 8px;
+}
+
+tr:nth-child(even) {
+    background-color: #dddddd;
+}
+/*My SigUp Modal*/
+.modal {
+    display: none;
+    /* Hidden by default */
+    position: fixed;
+    /* Stay in place */
+    z-index: 1;
+    /* Sit on top */
+    padding-top: 10px;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #282a2eb3;
+    overflow: auto;
+    
+}
+hr {
+    border: 1px solid #f1f1f1;
+    margin-bottom: 25px;
+}
+/* Clear floats */
+
+.clearfix::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+
+/* Modal Content */
+.modal-content {
+    margin: auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 40%;
+    color: #fff;
+    background-color: #1a1818cd;
+}
+
+/* The Close Button */
+
+.close {
+    color: #aaaaaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+}
+/*Close Sign up*/
+.Close {
+    color: #aaaaaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.Close:hover,
+.Close:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+}
+.modalHeader{
+    text-align: center;
+    font-weight: 400;
+    font-size: 130%;
+    text-decoration: underline;
+}
+.modalForm{
+    display: block;
+    padding: 10px;
+    margin-left: 10%;
+}
+.modalForm input{
+    width: 90%;
+    height: 40px;
+    border-radius: 5px;
+    margin-bottom: 2%;
+    font-size: 20px;
+}
+.btn-model-detail{
+    background-color: #4CAF50;
+    width: 100px;
+    margin-left: 20%;
+    margin-top: 5px;
+    padding: 5px;
+    font-size: 20px;
+    color: #ddd;
+}
+/* Full-width input fields */
+
+.modalForm input {
+    width: 100%;
+    padding: 15px;
+    margin: 5px 0 22px 0;
+    display: inline-block;
+    border: none;
+    background: #f1f1f1;
+}
+
+/* Add a background color when the inputs get focus */
+
+.modalForm input:focus {
+    background-color: #ddd;
+    outline: none;
+}
