@@ -1,0 +1,1 @@
+# assert  json.loads(res.data)['message'] == 'please Register'
