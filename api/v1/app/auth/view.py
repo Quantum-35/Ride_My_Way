@@ -23,8 +23,14 @@ def user_auth():
             return jsonify({'message':'Enter correct email format', 'status':'failed'}),400
         if len(str(password)) < 6:
             return jsonify({'message':'short password.Enter atleast 6 characters'}),400
+        user_details = {}
+        user_details['username']=username
+        user_details['email']=email
+        user_details['address']=address
+        user_details['password']=password
+        users.append(user_details)
         if payload['role']:
-            user_details = {}
+            
             user_details['role'] = 'driver'
             users.append(user_details)
         else:
