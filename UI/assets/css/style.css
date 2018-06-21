@@ -107,8 +107,44 @@ button:hover {
     display: table;
 }
 
-@media screen and (max-width: 300px) {
-    .cancelbtn, .signupbtn {
-       width: 100%;
+@media screen and (max-width: 600px) {
+    #about{
+        display: none;
+    }
+    .center-content h2{
+        font-size: 15px;
+    }
+    .sig_form{
+        position: absolute;
+        top:50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+    #fm_signup{
+        display: none;
+    }
+    #fm_login{
+        display: none;
+    }
+    #p_signup{
+        display: none; 
+    }
+    .center-content p {
+        font-size: 10px;
+    }
+    .cancelbtn {
+       width: 60%;
+       margin-left: 20%;
+    }
+}
+@media screen and (max-width: 1000px) {
+    #fm_signup{
+        display: none;
+    }
+    #p_signup{
+        display: none; 
+    }
+    #sig_form{
+        height: 80%;
     }
 }
