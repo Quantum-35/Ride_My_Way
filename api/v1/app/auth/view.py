@@ -20,7 +20,7 @@ def user_auth():
         if username == '' or email == '' or password == '' or address =='' or conf_pass == '':
             return jsonify({'message':"Failed you cannot submit empty fields"}),400
         if not re.match(r"[^@]+@[^@]+\.[^@]+", email):
-            return jsonify({'message':'Enter correct email format'}),400
+            return jsonify({'message':'Enter correct email format', 'status':'failed'}),400
         if len(str(password)) < 6:
             return jsonify({'message':'short password.Enter atleast 6 characters'}),400
         if payload['role']:

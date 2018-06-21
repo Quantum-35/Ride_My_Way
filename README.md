@@ -11,33 +11,109 @@ and passengers to join available ride offers.
 You need to have the Following before getting Started
 
 ```
-1. Web browser - Google Chrome [Recommended]
-2. Texteditor - Visual studio code [Recommended]
-3. Little Knowledge of Html, css and Javascript
+1. Python - download the latest version [Recommend]
+2. Flask
+3. Postman
 ```
-### Installation
-Download the Latest Version of Google chrome [here](https://chrome.en.softonic.com/download) and follow the installation instruction
-Download the Latest Version of Visual studio [here](https://code.visualstudio.com/download) and follow the installation instruction
-## What to do
-```
-1.Clone this repo and git checkout to feature-develop
-2.Open any index.html file on your browser
-```
-## Features
-One can signup as a passenger or driver
+You can get the link to download Latest version the above here:
 
-As a driver,one can;
+      1.Python [here](https://www.python.org/downloads/)
+
+      2.Flask [here](http://flask.pocoo.org/docs/1.0/installation/)
+
+     3. Postman [here](https://www.getpostman.com/apps)
+
+
+## Usage
+- [quick start](#Quick-Start)
+- [Installation](#Installation-and-Usage)
+- [Running tests](#running-tests)
+
+
+### Quick Start
+**Be sure to use the same version of the code as the version of the docs
+you're reading.**
+1. Clone the repo
+  ```
+  $ git clone https://github.com/Quantum-35/Ride_My_Way.git
+  $ cd Ride_MY_Way/api/v1
+  $ git checkout ft-develop-signup-#158500122
+  ```
+### Installation and Usage
+#### First
+Create a virtualenv and activate it::
+
+On Linux or macos terminal
+
+    python3 -m venv venv
+    . venv/bin/activate
+
+Or on Windows cmd::
+
+    py -3 -m venv venv
+    venv\Scripts\activate.bat
+
+Install the dependencies::
+
+    pip install -r requirements.txt 
+
+Run the development server:
+  ```
+  $ python run.py
+  ```
+
+Navigate to [http://localhost:5000](http://localhost:5000)
+
+### User registration.
+Send a `POST` request to `/api/v1/auth/register` endpoint with the payload in
+`Json`
+
+An example would be
 ```
-1. Create/offer rides to passengers
-2. Drivers can view requests to ride offers they created
-3. Drivers can accept or reject ride requests
-```
-As a passenger, one can;
-```
-1.View all the ride offers
-2.View details of a particular ride offer and request to join a ride
+{   
+  "username":"example",
+  "email": "example@gmail.com",
+  "address": "122kitale",
+  "password": "123456",
+  "confirm_password": "123456",
+  "role":"driver"
+}
 ```
 
+All fields above must be in valid  format and the password must be
+atleast six characters.
+If any of the vields is invalid  or empty or the password is empty or less than
+six character, the response `status` will be `failed` with the `message` correct `message`
+explaining where you went wrong e.g
+
+As shown below:
+```
+{
+    "message": "Failed you cannot submit empty fields",
+    "status": "failed"
+}
+```
+
+If the user already exists then they wont be registered again, the
+following response will be returned.
+```
+{
+    "message": "Failed, User already exists, Please sign In",
+    "status": "failed"
+}
+```
+
+### Running tests without coverage
+You can now run the tests from the terminal
+```
+python manage.py test
+```
+
+### Running tests with coverage
+You can also run tests with coverage by running this command in the terminal
+```
+pytest --cov-report term-missing --cov=app
+```
 ## Authors
 
 * **Quantum35** - *Initial work* - [quantum-35](https://github.com/Quantum-35/Ride_My_Way/)
