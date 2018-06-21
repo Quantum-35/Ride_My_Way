@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -5,29 +6,20 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>Ride My Way</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="../assets/css/style.css" />
     <link rel="stylesheet" type="text/css" media="screen" href="./assets/css/styles.css" />
+    <script src="main.js"></script>
 </head>
-<body> 
-    
-    <div id="preloader">
-        <div id="status">&nbsp;</div>
+<body>
+    <div class="topnav">
+        <a  href="./users.html">Home</a>
+        <a href="../../index.html" class="ft-right">Logout</a>
+        <a href="#" id='myBtn' class="ft-right">Profile</a>
+        <a class="active" style = 'width: 15%;' href="./ride-offers.html">Available rides</a>
+        <a href="./offerride.html">Offer Rides</a>
+        <a href="./riderequest.html">Ride requests</a>
     </div>
-    
-   <div class='myTopNav'>
-        <ul class="main-nav">
-            <li><a href="./index.html">Dashboard</a></li>
-            <li><a href="">Notifications <sup style="color:red;">33</sup></a></li>
-            <li><a href="">My Rides</a></li>
-        </ul>
-        <img src="./assets/images/icons/driver.jpg" alt="Logo" class="logo">
-        <div class='btside-nav' id='myBtn'>
-            <div class="bar1"></div>
-            <div class="bar2"></div>
-            <div class="bar3"></div>
-        </div>
-        <div id="myModal" class="side-nav">
-        
-            <!-- Side Nav content -->
+    <div id="myModal" class="side-nav">
             <div class="side-content">
                 <span class="close">&times;</span>
                 <div class="side-bar-image">
@@ -37,160 +29,288 @@
                 </div>
                 <ul class="side-bar-links">
                     <li class="active"> 
-                        <a href="./index.html"> Dashboard</a>
+                            <a  href="#">Home</a>
                     </li>
-                    <li><a href="./Offers/offers.html">Ride Offers</a> </li>
-                    <li> <a href="">Notifications</a> </li>
-                    <li> <a href=""> Posts</a> </li>
+                    <li><a href="./ride-offers.html">Available rides</a></li>
+                    <li> <a href="./offerride.html">Offer Rides</a> </li>
+                    <li> <a href="./riderequest.html">Ride request</a> </li>
                     <hr>
                     <li><a  style="color: rgba(122, 125, 122, 0.831);"> Acount Information </a></li>
+                    <hr> <li> <h6><i>upload car image</i></h6> <a href="../../index.html"><input type="file"></a></li>
                     <li><a href="../../index.html">Logout</a></li>
                 </ul>
             </div>
         
         </div>
-        <section>
-            <h2 style="text-align: center; margin-bottom: 20px;">My  Rides History</h2><hr>
-            <table>
-                    <tr>
-                      <th>#</th>
-                      <th>Driver Name</th>
-                      <th>Car Model</th>
-                      <th>Date</th>
-                      <th>Depature Time</th>
-                      <th>Price</th>
-                      <th>Origin</th>
-                      <th>Destination</th>
-                      <th>Status</th>
-                    </tr>
-                    <tr>
-                      <td>1</td>
-                      <td>Alfreds Futterkiste</td>
-                      <td>Toyotta</td>
-                      <td>20/06/2018</td>
-                      <td>7:30 am</td>
-                      <td>1000</td>
-                      <td>Nairobi</td>
-                      <td>Nakuru</td>
-                      <td style="color: green;">Confirmed</td>
-                    </tr>
-                    <tr>
-                        <td>2</td>
-                        <td>Mike John</td>
-                        <td>Toyotta</td>
-                        <td>18/06/2018</td>
-                        <td>7:30 am</td>
-                        <td>1000</td>
-                        <td>Nairobi</td>
-                        <td>Nakuru</td>
-                        <td style="color: brown;">Declined</td>
-                    </tr>
-                    <tr>
-                        <td>3</td>
-                        <td>Sharon Chep</td>
-                        <td>Mitsubishi</td>
-                        <td>10/06/2018</td>
-                        <td>7:30 am</td>
-                        <td>1000</td>
-                        <td>Nairobi</td>
-                        <td>Nakuru</td>
-                        <td style="color: green;">Confirmed</td>
-                    </tr>
-                    <tr>
-                        <td>2</td>
-                        <td>Gilly Nge</td>
-                        <td>Nissan</td>
-                        <td>1/06/2018</td>
-                        <td>7:30 pm</td>
-                        <td>1000</td>
-                        <td>Nairobi</td>
-                        <td>Nakuru</td>
-                        <td style="color: green;">Confirmed</td>
-                    </tr>
-                    <tr>
-                        <td>2</td>
-                        <td>Mike John</td>
-                        <td>Toyotta</td>
-                        <td>29/05/2018</td>
-                        <td>7:30 am</td>
-                        <td>1000</td>
-                        <td>Nairobi</td>
-                        <td>Nakuru</td>
-                        <td style="color:brown;">Declined</td>
-                    </tr>
-                  </table>
-                  
-        </section>
-        <footer class="footer">
-            <p>Andela Kenya Challange &copy; 2018</p>
-        </footer>
-        <div class='addbutton'>
-            <a href="#"> <img src="./assets/images/download.png" alt="add" id ='addbtn' class='addbtn'></a>
-            <ul class="ulAdd" id='ulAdd'>
-                <li ><a href="#"><img src="./assets/images/pen.png" alt="pen" class="pen"></a></li>
-            </ul>
-            <div id='modelPost'>
-                
+    <div class="center-cards">
+            <div class="cards">
+                <img src="./assets/images/car7.jpg" alt="Avatar" style="width:100%;height: 60%;">
+                <div class="cards-container">
+                        <p style="color: white;">Toyotta Model 2017<br> Depature: 7.20am</p>
+                        <button style="width: 50%;" id="detail_model_sec" class="model_details">Details</button> 
+                        <button style="width: 40%;float:right;" class="model_details" onclick="alert('Thank you For choosing this car')">Join</button>  
+                </div>
             </div>
-        </div>
+            <div class="cards">
+                <img src="./assets/images/car7.jpg" alt="Avatar" style="width:100%;height: 60%;">
+                <div class="cards-container">
+                        <p style="color: white;">Nissan Model 2017<br> Depature: 8.20am</p>
+                        <button style="width: 50%;" id="detail_model_sec1" class="model_details">Details</button> 
+                        <button style="width: 40%;float:right;" class="model_details" onclick="alert('Thank you For choosing this car')">Join</button> 
+                </div>
+            </div>
+            <div class="cards">
+                <img src="./assets/images/car7.jpg" alt="Avatar" style="width:100%;height: 60%;">
+                <div class="cards-container">
+                        <p style="color: white;">Toyotta Model 2017<br> Depature: 7.20am</p>
+                        <button style="width: 50%;" class="model_details" id="detail_model_sec2">Details</button> 
+                        <button style="width: 40%;float:right;"  class="model_details" onclick="alert('Thank you For choosing this car')">Join</button>  
+                </div>
+            </div>
+            <div class="cards">
+                <img src="./assets/images/car7.jpg" alt="Avatar" style="width:100%;height: 60%;">
+                <div class="cards-container">
+                        <p style="color: white;">Toyotta Model 2017<br> Depature: 6.20am</p>
+                        <button style="width: 50%;" class="model_details" id="detail_model_sec3">Details</button> 
+                        <button style="width: 40%;float:right;" class="model_details" onclick="alert('Thank you For choosing this car')">Join</button>
+                </div>
+            </div>
+            <div class="cards">
+                <img src="./assets/images/car7.jpg" alt="Avatar" style="width:100%;height: 60%;">
+                <div class="cards-container">
+                        <p style="color: white;">Toyotta Model 2017<br> Depature: 7.20am</p>
+                        <button style="width: 50%;" class="model_details" id="detail_model_sec4">Details</button> 
+                        <button style="width: 40%;float:right;" class="model_details" onclick="alert('Thank you For choosing this car')">Join</button> 
+                </div>
+            </div>
+            <div class="cards">
+                <img src="./assets/images/car7.jpg" alt="Avatar" style="width:100%;height: 60%;">
+                <div class="cards-container">
+                        <p style="color: white;">Toyotta Model 2017<br> Depature: 7.20am</p>
+                        <button style="width: 50%;" class="model_details" id="detail_model_sec5">Details</button> 
+                        <button style="width: 40%;float:right;" class="model_details" onclick="alert('Thank you For choosing this car')">Join</button>
+                </div>
+            </div>
+
+            <div id='modal_details' class="modal">
+                <div class="modal-content">
+                    <span class="close" id="detail_close">&times</span>
+                    <div class="modalHeader">Car Details</div><br>
+                    <img src="./assets/images/car7.jpg" alt="Avatar" style="width:100%;height: 300px;">
+                        
+                        <div style="margin-left: 20%;">
+                        <h3>Car Details</h3>
+                        <h4>Model: Toyota Fielder 2017</h4>
+                        <h4>Depature time: 7.20 am</h4>
+                        <h4>Origin: Nairobi</h4>
+                        <h4>Destination: Nakuru</h4>
+                        <h4>Driver Name: John Kinyanjui</h4>
+                        <button class="btn-model-detail">
+                            Join Ride
+                        </button>
+                        </div>
+                </div>
+            </div> 
+            <div id='modal_details1' class="modal">
+                <div class="modal-content">
+                    <span class="close" id="detail_close1">&times</span>
+                    <div class="modalHeader">Car Details</div><br>
+                    <img src="./assets/images/car7.jpg" alt="Avatar" style="width:100%;height: 300px;">
+                        
+                        <div style="margin-left: 20%;">
+                        <h3>Car Details</h3>
+                        <h4>Model: Toyota Fielder 2017</h4>
+                        <h4>Depature time: 7.20 am</h4>
+                        <h4>Origin: Nairobi</h4>
+                        <h4>Destination: Nakuru</h4>
+                        <h4>Driver Name: John Kinyanjui</h4>
+                        <button class="btn-model-detail">
+                            Join Ride
+                        </button>
+                        </div>
+                </div>
+            </div>
+            <div id='modal_details2' class="modal">
+                <div class="modal-content">
+                    <span class="close" id="detail_close2">&times</span>
+                    <div class="modalHeader">Car Details</div><br>
+                    <img src="./assets/images/car7.jpg" alt="Avatar" style="width:100%;height: 300px;">
+                        
+                        <div style="margin-left: 20%;">
+                        <h3>Car Details</h3>
+                        <h4>Model: Toyota Fielder 2017</h4>
+                        <h4>Depature time: 7.20 am</h4>
+                        <h4>Origin: Nairobi</h4>
+                        <h4>Destination: Nakuru</h4>
+                        <h4>Driver Name: John Kinyanjui</h4>
+                        <button class="btn-model-detail">
+                            Join Ride
+                        </button>
+                        </div>
+                </div>
+            </div>
+            <div id='modal_details3' class="modal">
+                <div class="modal-content">
+                    <span class="close" id="detail_close3">&times</span>
+                    <div class="modalHeader">Car Details</div><br>
+                    <img src="./assets/images/car7.jpg" alt="Avatar" style="width:100%;height: 300px;">
+                        
+                        <div style="margin-left: 20%;">
+                        <h3>Car Details</h3>
+                        <h4>Model: Toyota Fielder 2017</h4>
+                        <h4>Depature time: 7.20 am</h4>
+                        <h4>Origin: Nairobi</h4>
+                        <h4>Destination: Nakuru</h4>
+                        <h4>Driver Name: John Kinyanjui</h4>
+                        <button class="btn-model-detail">
+                            Join Ride
+                        </button>
+                        </div>
+                </div>
+            </div>
+            <div id='modal_details4' class="modal">
+                <div class="modal-content">
+                    <span class="close" id="detail_close4">&times</span>
+                    <div class="modalHeader">Car Details</div><br>
+                    <img src="./assets/images/car7.jpg" alt="Avatar" style="width:100%;height: 300px;">
+                        
+                        <div style="margin-left: 20%;">
+                        <h3>Car Details</h3>
+                        <h4>Model: Toyota Fielder 2017</h4>
+                        <h4>Depature time: 7.20 am</h4>
+                        <h4>Origin: Nairobi</h4>
+                        <h4>Destination: Nakuru</h4>
+                        <h4>Driver Name: John Kinyanjui</h4>
+                        <button class="btn-model-detail">
+                            Join Ride
+                        </button>
+                        </div>
+                </div>
+            </div>
+            <div id='modal_details5' class="modal">
+                <div class="modal-content">
+                    <span class="close" id="detail_close5">&times</span>
+                    <div class="modalHeader">Car Details</div><br>
+                    <img src="./assets/images/car7.jpg" alt="Avatar" style="width:100%;height: 300px;">
+                        
+                        <div style="margin-left: 20%;">
+                        <h3>Car Details</h3>
+                        <h4>Model: Toyota Fielder 2017</h4>
+                        <h4>Depature time: 7.20 am</h4>
+                        <h4>Origin: Nairobi</h4>
+                        <h4>Destination: Nakuru</h4>
+                        <h4>Driver Name: John Kinyanjui</h4>
+                        <button class="btn-model-detail">
+                            Join Ride
+                        </button>
+                        </div>
+                </div>
+            </div>
     </div>
-    <script src='./assets/js/jquery-3.3.1.min.js'></script>
-    <script>
-       Window.onclick = function(e) {
-           
-       }
-    </script>
-    <script>
-       
-        
-            var modal = document.getElementById('myModal');
-
-            var btn = document.getElementById("myBtn");
-
-            var span = document.getElementsByClassName("close")[0];
-
-            btn.onclick = function () {
-                modal.style.display = "block";
-            }
-
-            span.onclick = function () {
-                modal.style.display = "none";
-            }
-            
-            
-            $(window).on('load', function () { 
-                    $('#status').fadeOut(); 
-                    $('#preloader').delay(350).fadeOut('slow'); 
-                    $('body').delay(350).css({ 'overflow': 'visible' });
-                })
-            
-            var addBottomBtn = document.getElementById('addbtn');
-            var showMeCont = document.getElementById('ulAdd');
-            addBottomBtn.onclick = function(){
-                showMeCont.style.display='block';
-            }
-            window.onclick = function(event){
-                if(event.target!== addBottomBtn){
-                     showMeCont.style.display = 'none';
-                }
-                if (event.target == modal) {
-                    modal.style.display = "none";
-                    console.log('Hello')
-                }
-            }
-            $(document).ready(function () {
-                $('.Count').each(function () {
-                    var $this = $(this);
-                    jQuery({ Counter: 0 }).animate({ Counter: $this.text() }, {
-                        duration: 5000,
-                        easing: 'swing',
-                        step: function () {
-                            $this.text(Math.ceil(this.Counter));
-                        }
-                    });
-                });
-
-            });
-    </script>
 </body>
+ <script>
+        var detail_model = document.getElementById('detail_model_sec')
+        var modal_details = document.getElementById('modal_details')
+        var detail_close = document.getElementById('detail_close')
+
+        detail_model.onclick = function(){
+            modal_details.style.display = 'block';
+        }
+        detail_close.onclick = function (){
+            modal_details.style.display = 'none';
+        }
+        
+        var detail_model1 = document.getElementById('detail_model_sec1')
+        var modal_details1 = document.getElementById('modal_details1')
+        var detail_close1 = document.getElementById('detail_close1')
+
+        detail_model1.onclick = function(){
+            modal_details1.style.display = 'block';
+        }
+        detail_close1.onclick = function (){
+            modal_details1.style.display = 'none';
+        }
+
+        var detail_model2 = document.getElementById('detail_model_sec2')
+        var modal_details2 = document.getElementById('modal_details2')
+        var detail_close2 = document.getElementById('detail_close2')
+
+        detail_model2.onclick = function(){
+            modal_details2.style.display = 'block';
+        }
+        detail_close2.onclick = function (){
+            modal_details2.style.display = 'none';
+        }
+        
+        var detail_model3 = document.getElementById('detail_model_sec3')
+        var modal_details = document.getElementById('modal_details3')
+        var detail_close3 = document.getElementById('detail_close3')
+
+        detail_model3.onclick = function(){
+            modal_details3.style.display = 'block';
+        }
+        detail_close3.onclick = function (){
+            modal_details3.style.display = 'none';
+        }
+        
+        var detail_model4 = document.getElementById('detail_model_sec4')
+        var modal_details = document.getElementById('modal_details4')
+        var detail_close4 = document.getElementById('detail_close4')
+
+        detail_model4.onclick = function(){
+            modal_details4.style.display = 'block';
+        }
+        detail_close4.onclick = function (){
+            modal_details4.style.display = 'none';
+        }
+
+        var detail_model5 = document.getElementById('detail_model_sec5')
+        var modal_details5 = document.getElementById('modal_details5')
+        var detail_close5 = document.getElementById('detail_close5')
+
+        detail_model5.onclick = function(){
+            modal_details5.style.display = 'block';
+        }
+        detail_close5.onclick = function (){
+            modal_details5.style.display = 'none';
+        }
+
+        var modal = document.getElementById('myModal');
+    
+        var btn = document.getElementById("myBtn");
+
+        var span = document.getElementsByClassName("close")[0];
+
+        btn.onclick = function () {
+            modal.style.display = "block";
+        }
+
+        span.onclick = function () {
+            modal.style.display = "none";
+        }
+        window.onclick = function(event){
+                if (event.target == modal) {
+                        modal.style.display = "none";
+                        console.log('Hello')
+                    }
+                if(event.target == modal_details){
+                    modal_details.style.display = 'none';
+                }
+                if(event.target == modal_details1){
+                    modal_details1.style.display = 'none';
+                }
+                if(event.target == modal_details2){
+                    modal_details2.style.display = 'none';
+                }
+                if(event.target == modal_details3){
+                    modal_details3.style.display = 'none';
+                }
+                if(event.target == modal_details4){
+                    modal_details4.style.display = 'none';
+                }
+                if(event.target == modal_details5){
+                    modal_details5.style.display = 'none';
+                }
+        }
+ </script>
 </html>

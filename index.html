@@ -6,206 +6,23 @@
     <title>Ride My Way</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" type="text/css" media="screen" href="./UI/assets/css/style.css" />
-    <link rel="stylesheet" type="text/css" media="screen" href="./UI/assets/css/mediaQueries.css" />
-    
+    <script src="main.js"></script>
 </head>
 <body>
-    <header class='format-header'>
-        <div class='myLogo'>
-            <img src="./UI/assets/img/download.png" alt="My Logo" class="logo">
-            <ul class="main-nav">
-                <li><a href="#lets-ride">Ride With Us</a></li>
-                <li><a href="#gallary">Gallery</a></li>
-                <li><a href="#our-cities">Our Contacts</a></li>
-                <li><a type='button' id='btnsignUp'>Sign Up</a></li>
-                <li><a type="button" id="btnsignIn">Sign in</a></li>
-            </ul>
-        </div>
-        <div id='myModal' class="modal">
-            <div class="modal-content">
-                <span class="close">&times</span>
-                <div class="modalHeader">Sign Up</div>
-                <p style="text-align: center;">Please fill this form to create an account</p><hr>
-                <form class='modalForm' action="#">
-                    <input type="text" placeholder="Username" name="name" required>
-                    <input type="email" placeholder="Email" name="email" required>
-                    <input type="password" placeholder="Password" name="psw" required>
-                    <input type="text" placeholder="Address" name="address" required>
-                    <input type="text" placeholder="Phone Number" name="phoneNumber" required>
-                    <p>By creating an account you agree to our
-                        <a href="#" style="color:dodgerblue">Terms & Privacy</a>.</p>
-                    <div class="clearfix">
-                        <a href='./Users/index.html' type="button" style='text-decoration: none;' onclick="document.getElementById('myModal').style.display='none'" class="cancelbtn">Cancel</a>
-                        <a href='./Drivers/index.html' type="submit" style='text-decoration: none;' class="signupbtn">Sign Up</a>
-                    </div>
-                </form> 
-            </div>
-        </div>
-        <div id='myModalSignIn' class="modal">
-            <div class="modal-content">
-                <span class="Close">&times</span>
-                <div class="modalHeader">Sign in</div>
-                 <p style="text-align: center;">Please fill this form to Login</p>
-                <hr>
-                <form class='modalForm' action="/auth/login">
-                    <input type="text" placeholder="Username or Email" name="usernameOrEmail" required>
-                    <input type="password" placeholder="Password" name="psw" required>
-                    <div class="clearfix">
-                        <a  href='./UI/Users/index.html' type="submit" style='text-decoration: none;text-align: center;' class="loginbtn">Login</a>
-                        
-                        <a href="./UI/Drivers/index.html" style="padding: 10px;">Drivers Page</a>
-                    </div>
-                </form>
-            </div>
-        </div>
-
-        <div class="sideMessage">
-            <h1>We Value our Customers, Because Customers are always Right</h1>
-            <a class='bt bt-full' href="#" onclick="alert('Damn Sure we are You Are!!')">Wanna Travel</a>
-             <a class ='bt bt-ghost' href="#" onclick="alert('Yes Sure.Just Log in')">Show me More</a>
-        </div>
-    </header> 
-    <section>
-        <div id="lets-ride" class="lets-ride" style="margin-top: 20px;">
-            <h1>Travel to arrive Safely </h1>
-            <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. <br>
-                Nemo eos earum, amet nostrum in officiis sit autem ut aliquam <br>nobis perferendis itaque natus asperiores hic molestias 
-                debitis assumenda consectetur blanditiis!
-            </p>
-            <div style="float: left; margin: 20px 30px; width: 30%;">
-                <h3 style="margin-bottom: 20px;">We Work 365 Days a Year</h3><hr>
-                <p>
-                    Lorem, ipsum dolor sit amet consectetur <br>
-                    adipisicing elit. Repellendus soluta nemo ea 
-                    officiis amet in tenetur, rerum exercitationem illum blanditiis accusantium alias optio recusandae omnis voluptates praesentium ut dolor nesciunt.
-                </p>
-            </div>
-            <div style="float: left; margin: 20px 30px; width: 30%;">
-                <h3 style="margin-bottom: 20px;">We are Very Reliable</h3><hr>
-                <p>
-                    Lorem, ipsum dolor sit amet consectetur
-                    <br> adipisicing elit. Repellendus soluta nemo ea officiis amet in tenetur, rerum exercitationem illum blanditiis accusantium
-                    alias optio recusandae omnis voluptates praesentium ut dolor nesciunt.
-                </p>
-            </div>
-            <div style="float: left; margin: 20px 30px; width: 25%;">
-                <h3 style="margin-bottom: 20px;">We Put Our Customers First</h3><hr>
-                <p>
-                    Lorem, ipsum dolor sit amet consectetur
-                    <br> adipisicing elit. Repellendus soluta nemo ea officiis amet in tenetur, rerum exercitationem illum blanditiis accusantium
-                    alias optio recusandae omnis voluptates praesentium ut dolor nesciunt.
-                </p>
-            </div>
-        </div>
-    </section>
-    <div class="clearfix"></div>
-    <div id='gallary' class="gallary">
-        <h1>Our Cars In Good Working Condition</h1><hr>
-        <div class="my-container">
-            <img src="./UI/assets/img/download1.jpg" alt="Avatar" class="my-image">
-            <div class="overlay">
-                <div class="my-text">Toyota 2017</div>
-            </div>
-        </div>
-        <div class="my-container">
-            <img src="./UI/assets/img/download2.jpg" alt="Avatar" class="my-image">
-            <div class="overlay">
-                <div class="my-text">Mitsubishi 2018</div>
-            </div>
-        </div>
-        <div class="my-container">
-            <img src="./UI/assets/img/download3.jpg" alt="Avatar" class="my-image">
-            <div class="overlay">
-                <div class="my-text">Limo</div>
-            </div>
-        </div>
-        <div class="my-container">
-            <img src="./UI/assets/img/download2.jpg" alt="Avatar" class="my-image">
-            <div class="overlay">
-                <div class="my-text">Toyota 2018</div>
-            </div>
-        </div>
-        <div class="my-container">
-            <img src="./UI/assets/img/download2.jpg" alt="Avatar" class="my-image">
-            <div class="overlay">
-                <div class="my-text">Subaru</div>
-            </div>
-        </div>
-        <div class="my-container">
-            <img src="./UI/assets/img/download2.jpg" alt="Avatar" class="my-image">
-            <div class="overlay">
-                <div class="my-text">Toyota</div>
-            </div>
-        </div>
+    <div class="topnav">
+        <a class="active" href="#home">Home</a>
+        <a href="./UI/login.html" class="ft-right">Login</a>
+        <a href="./UI/signup.html" class="ft-right">Sign up</a>
+        <a href="./UI/about.html" class="ft-right">About</a>
     </div>
-    <div >
+    <div class="center-content">
+        <h2>Welcome to Ride My Way</h2>
+
+        <p style="color: rgb(191, 196, 188);">
+            Ride-my App is a carpooling application that provides drivers with the ability to create ride offers
+            and passengers to join available ride offers.
+        </p>
         
     </div>
-    <div id="our-cities" class="our-cities">
-        <hr><h1 style="margin-left: 400px;">Where We Are Located</h1><hr>
-        <div style="margin-left: 400px;">
-            <h3>Headquaters : RideMyWay Building Nairobi Kenya</h3>
-            <h6>Contact 0712313167616</h6>
-            <h3>Branch :HelloWorld Building Naivasha</h3>
-            <h6>Contact 0720181818</h6>
-        </div>
-    </div>
-    <div style="float: right; margin-top: 20px;">
-        <h3>Email us</h3>
-        <input type="email" name="" id="" placeholder="Your email" style="height: 20px;"><br>
-        <textarea name="email" id="" cols="30" rows="10"></textarea>
-        <button style="background-color: rgba(0, 128, 0, 0.475);height: 20px;padding: 5px;">Submit</button>
-    </div>
-    <div class="clearfix"></div>
-   <footer class="footer">
-            <p>Andela Kenya Challange &copy; 2018</p>
-    </footer>
-    <script>
-        // Get the modal
-        var modal = document.getElementById('myModal');
-        var myModalSignIn = document.getElementById('myModalSignIn');
-
-        // Get the button that opens the modal
-        var btn = document.getElementById("btnsignUp");
-        var btnsignIn = document.getElementById("btnsignIn");
-        // Get the <span> element that closes the modal
-        var span = document.getElementsByClassName("close")[0];
-        var Span = document.getElementsByClassName("Close")[0];
-            
-        // When the user clicks the button, open the modal 
-        btn.onclick = function () {
-            modal.style.display = "block";
-        }
-        btnsignIn.onclick = function() {
-            myModalSignIn.style.display ='block';
-        }
-        // When the user clicks on <span> (x), close the modal
-        span.onclick = function () {
-            modal.style.display = "none";
-        }
-        Span.onclick =function(){
-            myModalSignIn.style.display = 'none';
-        }
- 
-        // When the user clicks anywhere outside of the modal, close it
-        window.onclick = function (event) {
-            if (event.target == modal) {
-                modal.style.display = "none";
-            }
-            if(event.target == myModalSignIn){
-                myModalSignIn.style.display = "none";
-            }
-        }
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-                anchor.addEventListener('click', function (e) {
-                    e.preventDefault();
-
-                    document.querySelector(this.getAttribute('href')).scrollIntoView({
-                        behavior: 'smooth'
-                    });
-                });
-            });
-    </script>
 </body>
 </html>
