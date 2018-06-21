@@ -284,3 +284,52 @@ tr:nth-child(even) {
     -ms-transform: translate(-50%, -50%);
     text-align: center;
   }
+  @media screen and (max-width: 300px) {
+    .card{
+        position: absolute;
+        top: 20%;
+        left: 10%;
+        width: 100%;
+    }
+    #img_profile{
+        display: none;
+    }
+}
+  @media screen and (max-width: 600px) {
+      .card{
+          position: absolute;
+          top: 30%;
+          left: 10%;
+          width: 100%;
+      }
+      #img_profile{
+          widows: 10%;
+      }
+      #prof_container{
+          width: 60%;
+      }
+    h4{
+        font-size: 10px;
+    }
+    #ch_size, #myBtn{
+        width: 10%;
+        height: 20%;
+        font-size: 10px;
+    }
+    .us_table{
+        display: none;
+    }
+    .us_details{
+        font-size: 10px;
+    }
+    .model_details{
+        width: 100%;
+        font-size: 10px;
+        height: 20%;
+        float: left;
+        padding: 5%;
+    }
+    #us_offer{
+        display: none;
+    }
+  }
