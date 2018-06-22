@@ -381,13 +381,13 @@ tr:nth-child(even) {
       float: right;
       width: 60%;
       margin-top: 1%;
-      background-color: rgb(129, 129, 118);
+      background-color: rgba(129, 129, 118, 0.26);
   }
   .make_response h6{
       text-align: center;
   }
   .dropbtn {
-    background-color: rgb(74, 78, 74);
+    background-color: rgba(74, 78, 74, 0.815);
     color: white;
     padding: 5px;
     font-size: 16px;
@@ -424,3 +424,26 @@ textarea{
 .dropdown:hover .dropdown-content {display: block;}
 
 .dropdown:hover .dropbtn {background-color: #3e8e41;}
+.rd_tbl{
+    color: aliceblue;
+}
+.float_right_form{
+    position: absolute;
+    right: 1%;
+    margin-top: 3%;
+    width: 20%;
+    color: aliceblue;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    background-color: rgba(159, 180, 175, 0.336);
+    padding: 1%;
+}
+.span {
+  content: "\219D";
+}
+.popula{
+    color: rgba(2, 49, 49, 0.753);
+}
+ul{
+    overflow: auto;
+    list-style-type: none;
+  }

@@ -16,9 +16,9 @@
          <a href="#" id='myBtn' class="ft-right">Profile</a>
          <a href="./ride-offers.html" id="ch_size">Available rides</a>
          <a href="./offerride.html" id="ch_size">Offer Rides</a>
-         <a class="active" style="width: 11%;" id="ch_size" href="./riderequest.html">Ride requests</a>
+         <a id="ch_size" href="./riderequest.html">Ride requests</a>
          <a id="ch_size" href="./ridehistory.html">My rides</a>
-         <a id="ch_size"  href="./rides.html">Rides made</a>
+         <a id="ch_size" class="active" style="width: 11%;" href="./rides.html">Rides made</a>
          <a id="ch_size" href="./feedback.html">Feedback</a>
       </div>
       <div id="myModal" class="side-nav">
@@ -52,66 +52,44 @@
          <table>
             <tr>
                <th style="color: aliceblue;">#</th>
-               <th class="us_table" style="color: aliceblue;">Passenger Name</th>
-               <th style="color: aliceblue;">Address</th>
+               <th class="us_table" style="color: aliceblue;">Origin</th>
+               <th style="color: aliceblue;">Destination</th>
                <th style="color: aliceblue;">Contact</th>
-               <th style="color: aliceblue;">Request Time</th>
+               <th style="color: aliceblue;">Time</th>
                <th style="color: aliceblue;">Action</th>
             </tr>
             <tr>
-               <td style="width: 2%;">1</td>
-               <td>Alfreds Futterkiste</td>
-               <td>12 Nairobi</td>
+               <td style="width: 2%;">1234</td>
+               <td>Nairobi</td>
+               <td>Nakuru</td>
                <td>071218126712</td>
-               <th>7.00am</th>
+               <th>12.00pm</th>
                <td>
-                  <button style="width: 40%; background-color: green;">Accept</button>
-                  <button style="width: 40%; background-color: brown;">Decline</button>
+                  <button style="width: 40%; background-color: green;">Edit</button>
+                  <button style="width: 40%; background-color: brown;">Delete</button>
                </td>
             </tr>
-            <tr>
-               <td style="width: 2%;">2</td>
-               <td style="color: rgb(211, 217, 219)">Quantum C</td>
-               <td style="color: rgb(211, 217, 219)">12 Limuru</td>
-               <td style="color: rgb(211, 217, 219)">071218126712</td>
-               <th style="color: rgb(211, 217, 219)">7.00am</th>
-               <td>
-                  <button style="width: 40%; background-color: green;">Accept</button>
-                  <button style="width: 40%; background-color: brown;">Decline</button>
-               </td>
+            <tr class="rd_tbl">
+                <td style="width: 2%;">1234</td>
+                <td>Nakuru</td>
+                <td>Nairobi</td>
+                <td>071218126712</td>
+                <th>9.00am</th>
+                <td>
+                    <button style="width: 40%; background-color: green;">Edit</button>
+                    <button style="width: 40%; background-color: brown;">Delete</button>
+                </td>
             </tr>
             <tr>
-               <td style="width: 2%;">3</td>
-               <td>Leah Ngaira</td>
-               <td>12 Ngong</td>
-               <td>071218126712</td>
-               <th>7.00am</th>
-               <td>
-                  <button style="width: 40%; background-color: green;">Accept</button>
-                  <button style="width: 40%; background-color: brown;">Decline</button>
-               </td>
-            </tr>
-            <tr>
-               <td style="width: 2%;">4</td>
-               <td style="color: rgb(211, 217, 219)">Alfreds Futterkiste</td>
-               <td style="color: rgb(211, 217, 219)">12 Nairobi</td>
-               <td style="color: rgb(211, 217, 219)">071218126712</td>
-               <th style="color: rgb(211, 217, 219)">7.00am</th>
-               <td>
-                  <button style="width: 40%; background-color: green;">Accept</button>
-                  <button style="width: 40%; background-color: brown;">Decline</button>
-               </td>
-            </tr>
-            <tr>
-               <td style="width: 2%;">3</td>
-               <td>Leah Ngaira</td>
-               <td>12 Ngong</td>
-               <td>071218126712</td>
-               <th>7.00am</th>
-               <td>
-                  <input type="button" title="Change Mind" value="Accepted" id="btn_toggle">
-                  <input type="button" title="Change Mind" value="Recall" id="bt_toggle">
-               </td>
+                <td style="width: 2%;">1234</td>
+                <td>Nairobi</td>
+                <td>Nakuru</td>
+                <td>071218126712</td>
+                <th>7.00am</th>
+                <td>
+                    <button style="width: 40%; background-color: green;">Edit</button>
+                    <button style="width: 40%; background-color: brown;">Delete</button>
+                </td>
             </tr>
          </table>
       </div>
