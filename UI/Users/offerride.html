@@ -1,89 +1,90 @@
-
 <!DOCTYPE html>
 <html>
-<head>
-    <meta charset="utf-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Ride My Way</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" type="text/css" media="screen" href="../assets/css/style.css" />
-    <link rel="stylesheet" type="text/css" media="screen" href="./assets/css/styles.css" />
-    <script src="main.js"></script>
-</head>
-<body>
-    <div class="topnav">
-        <a  href="./users.html" id="ch_size">Home</a>
-        <a href="../../index.html" id="ch_size" class="ft-right">Logout</a>
-        <a href="#" id='myBtn' class="ft-right">Profile</a>
-        <a href="./ride-offers.html" id="ch_size">Available rides</a>
-        <a class="active" style="width: 10%;" id="ch_size" href="./offerride.html">Offer Rides</a>
-        <a href="./riderequest.html" id="ch_size">Ride requests</a>
-        <a  style="width: 15%;" id="ch_size" href="./ridehistory.html">My rides</a>
-    </div>
-    <div id="myModal" class="side-nav">
-            <div class="side-content">
-                <span class="close">&times;</span>
-                <div class="side-bar-image">
-                    <img src="./assets/images/admin.jpg" alt="Admin Pic" class="profilePic">
-                    <p>quantum coputing <br>
-                        quantum25@andela.com</p>
-                </div>
-                <ul class="side-bar-links">
-                    <li class="active"> 
-                            <a  href="#">Home</a>
-                    </li>
-                    <li><a href="./ride-offers.html">Available rides</a></li>
-                    <li> <a href="./offerride.html">Offer Rides</a> </li>
-                    <li> <a href="./riderequest.html">Ride request</a> </li>
-                    <hr>
-                    <li><a  style="color: rgba(122, 125, 122, 0.831);"> Acount Information </a></li>
-                    <hr> <li> <h6><i>upload car image</i></h6> <a href="../../index.html"><input type="file"></a></li>
-                    <li><a href="../../index.html">Logout</a></li>
-                </ul>
+   <head>
+      <meta charset="utf-8" />
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <title>Ride My Way</title>
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <link rel="stylesheet" type="text/css" media="screen" href="../assets/css/style.css" />
+      <link rel="stylesheet" type="text/css" media="screen" href="./assets/css/styles.css" />
+      <script src="main.js"></script>
+   </head>
+   <body>
+      <div class="topnav">
+         <a  href="./users.html" id="ch_size">Home</a>
+         <a href="../../index.html" id="ch_size" class="ft-right">Logout</a>
+         <a href="#" id='myBtn' class="ft-right">Profile</a>
+         <a href="./ride-offers.html" id="ch_size">Available rides</a>
+         <a class="active" style="width: 10%;" id="ch_size" href="./offerride.html">Offer Rides</a>
+         <a href="./riderequest.html" id="ch_size">Ride requests</a>
+         <a  style="width: 15%;" id="ch_size" href="./ridehistory.html">My rides</a>
+      </div>
+      <div id="myModal" class="side-nav">
+         <div class="side-content">
+            <span class="close">&times;</span>
+            <div class="side-bar-image">
+               <img src="./assets/images/admin.jpg" alt="Admin Pic" class="profilePic">
+               <p>quantum coputing <br>
+                  quantum25@andela.com
+               </p>
             </div>
-        
-        </div>
-    <div class="center-contenttt">
-            <form action="" style="float: left; width: 60%;margin-left: 2%;" >
-                    <div class="container" style="width: 100%;">
-                      <h1 style="text-align: center;color: thistle;" id="us_offer">Make a Ride Offer</h1>
-                      <hr>
-                      <label for="origin"><b>Origin</b></label><br>
-                      <input type="text" placeholder="origin" name="origin" required style="font-size: 20px;"><br>
-                      <label for="origin"><b>Destination</b></label><br>
-                      <input type="text" placeholder="Destination" name="destination" required style="font-size: 20px;"><br>
-                      <label for="origin"><b>Depature</b></label><br>
-                      <input type="text" placeholder="7.30am" name="depature" required style="font-size: 20px;"><br>
-                      <label for="origin"><b>Telephon</b></label><br>
-                      <input type="text" placeholder="07xxxx" name="contact" required style="font-size: 20px;"><br>
-
-                      <div class="clearfix">
-                        <button type="button" class="cancelbtn">Offer Ride</button><br>
-                      </div>
-                    </div>
-                  </form>
-        
-    </div>
-</body>
-<script>
-        var modal = document.getElementById('myModal');
-    
-        var btn = document.getElementById("myBtn");
-    
-        var span = document.getElementsByClassName("close")[0];
-    
-        btn.onclick = function () {
-            modal.style.display = "block";
-        }
-    
-        span.onclick = function () {
-            modal.style.display = "none";
-        }
-        window.onclick = function(event){
-                if (event.target == modal) {
-                    modal.style.display = "none";
-                    console.log('Hello')
-                }
-            }
-    </script>
+            <ul class="side-bar-links">
+               <li class="active"> 
+                  <a  href="#">Home</a>
+               </li>
+               <li><a href="./ride-offers.html">Available rides</a></li>
+               <li> <a href="./offerride.html">Offer Rides</a> </li>
+               <li> <a href="./riderequest.html">Ride request</a> </li>
+               <hr>
+               <li><a  style="color: rgba(122, 125, 122, 0.831);"> Acount Information </a></li>
+               <hr>
+               <li>
+                  <h6><i>upload car image</i></h6>
+                  <a href="../../index.html"><input type="file"></a>
+               </li>
+               <li><a href="../../index.html">Logout</a></li>
+            </ul>
+         </div>
+      </div>
+      <div class="center-contenttt">
+         <form action="" style="float: left; width: 60%;margin-left: 2%;" >
+            <div class="container" style="width: 100%;">
+               <h1 style="text-align: center;color: thistle;" id="us_offer">Make a Ride Offer</h1>
+               <hr>
+               <label for="origin"><b>Origin</b></label><br>
+               <input type="text" placeholder="origin" name="origin" required style="font-size: 20px;"><br>
+               <label for="origin"><b>Destination</b></label><br>
+               <input type="text" placeholder="Destination" name="destination" required style="font-size: 20px;"><br>
+               <label for="origin"><b>Depature</b></label><br>
+               <input type="text" placeholder="7.30am" name="depature" required style="font-size: 20px;"><br>
+               <label for="origin"><b>Telephon</b></label><br>
+               <input type="text" placeholder="07xxxx" name="contact" required style="font-size: 20px;"><br>
+               <div class="clearfix">
+                  <button type="button" class="cancelbtn">Offer Ride</button><br>
+               </div>
+            </div>
+         </form>
+      </div>
+   </body>
+   <script>
+      var modal = document.getElementById('myModal');
+      
+      var btn = document.getElementById("myBtn");
+      
+      var span = document.getElementsByClassName("close")[0];
+      
+      btn.onclick = function () {
+          modal.style.display = "block";
+      }
+      
+      span.onclick = function () {
+          modal.style.display = "none";
+      }
+      window.onclick = function(event){
+              if (event.target == modal) {
+                  modal.style.display = "none";
+                  console.log('Hello')
+              }
+          }
+   </script>
 </html>
