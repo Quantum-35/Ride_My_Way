@@ -447,3 +447,75 @@ ul{
     overflow: auto;
     list-style-type: none;
   }
+  .acc_infor{
+    color: rgba(122, 125, 122, 0.831);
+  }
+  .user_avater{
+    width:30%;margin-left: 40%;
+  }
+  .card_txt{
+    padding: 5px;
+  }
+  .card_txt_name{
+    color: rgb(128, 37, 37)
+  }
+  .ride_offer_avatar{
+    width:100%;
+    height: 60%;
+  }
+  #detail_model_sec, #detail_model_sec1
+  ,#detail_model_sec2, #detail_model_sec3
+  ,#detail_model_sec4, #detail_model_sec5{
+    width: 50%;
+  }
+  #btn_join{
+    width: 40%;
+    float:right;
+  }
+  .nissan_col{
+    color: white;
+  }
+  .car_modal_img{
+    width:100%;height: 300px;
+  }
+  .form_modal_car{
+    margin-left: 20%;
+  }
+  .sign_up_form{
+    float: left; 
+    width: 60%;
+    margin-left: 2%;
+  }
+  #sg_container{
+    width: 100%;
+  }
+  .mk_ride_offer{
+    text-align: center;
+    color: thistle;
+  }
+  .form_content_font{
+    font-size: 20px;
+  }
+  .tbl_rows{
+    color: aliceblue;
+  }
+  .tbl_td{
+    width: 2%;
+  }
+  .tbl_btn_acc{
+    width: 40%;
+    background-color: green;
+  }
+  .tbl__btn_rej{
+    width: 40%; 
+    background-color: brown;
+  }
+  .tbl_pedding{
+    color: rgb(119, 128, 0) 
+  }
+  .tbl__btn_rej1{
+    color: brown;
+  }
+  .tbl_btn_acc1{
+    color: green;
+  }
