@@ -7,18 +7,18 @@
       <meta name="viewport" content="width=device-width, initial-scale=1">
       <link rel="stylesheet" type="text/css" media="screen" href="../assets/css/style.css" />
       <link rel="stylesheet" type="text/css" media="screen" href="./assets/css/styles.css" />
-      <script src="./assets/js/main.js"></script>
+      <script src="main.js"></script>
    </head>
    <body>
       <div class="topnav">
-         <a class="active" id="ch_size" href="#">Home</a>
-         <a href="../../index.html" id="ch_size" class="ft-right">Logout</a>
-         <a href="#" id='myBtn'  class="ft-right">Profile</a>
+         <a  href="./users.html" id="ch_size">Home</a>
+         <a href="../../index.html" id="id="ch_size"" class="ft-right">Logout</a>
+         <a href="#" id='myBtn' class="ft-right">Profile</a>
          <a href="./ride-offers.html" id="ch_size">Available rides</a>
          <a href="./offerride.html" id="ch_size">Offer Rides</a>
-         <a href="./riderequest.html" id="ch_size">Ride requests</a>
-         <a id="ch_size" href="./ridehistory.html">My rides</a>
-         <a id="ch_size" href="./rides.html">Rides made</a>
+         <a class="actiive" id="ch_size" href="./riderequest.html">Ride requests</a>
+         <a class="active"  id="ch_size" href="#">My rides</a>
+         <a id="ch_size"  href="./rides.html">Rides made</a>
          <a id="ch_size" href="./feedback.html">Feedback</a>
       </div>
       <div id="myModal" class="side-nav">
@@ -26,9 +26,6 @@
             <span class="close">&times;</span>
             <div class="side-bar-image">
                <img src="./assets/images/admin.jpg" alt="Admin Pic" class="profilePic">
-               <div class="overlay">
-                  <div class="text">Hello World</div>
-               </div>
                <p>quantum computing <br>
                   quantum25@andela.com
                </p>
@@ -51,18 +48,57 @@
             </ul>
          </div>
       </div>
-      <div class="center-contentt">
-      <div class="clearfix">
-         <div class="card">
-            <img src="./assets/images/admin.jpg" alt="Avatar" id="img_profile" class="user_avater">
-            <div class="container" id="prof_container">
-               <h4 class="card_txt" ><b><span class="card_txt_name">Name</span>: Jane Doe</b></h4>
-               <h4 class="card_txt"><b><span class="card_txt_name">From</span>: Nairobi Kenya</b></h4>
-               <h4 class="card_txt"><span class="card_txt_name">No.of rides given</span>: 12</h4>
-               <h4 class="card_txt"><span class="card_txt_name">No.of rides Taken</span>: 4</h4>
-               <h4>Total 16</h4>
-            </div>
-         </div>
+      <div class="centered-contentt">
+         <table>
+            <tr>
+               <th class="tbl_rows">#</th>
+               <th class="tbl_rows">Driver Name</th>
+               <th class="tbl_rows">Pickup</th>
+               <th class="tbl_rows">Destination</th>
+               <th class="tbl_rows">Price</th>
+               <th class="tbl_rows">Feedback</th>
+            </tr>
+            <tr>
+                <td class="tbl_td">1</td>
+                <td>Alfreds Futterkiste</td>
+                <td>Nakuru</td>
+                <td>Nairobi</td>
+                <th>500</th>
+                <th class="tbl_pedding">Pending</th>
+             </tr>
+            <tr class="rd_tbl">
+               <td class="tbl_td">2</td>
+               <td>Alfreds Futterkiste</td>
+               <td>Nairobi</td>
+               <td>Nakuru</td>
+               <th>500</th>
+               <th class="tbl_btn_acc1">Confirmed</th>
+            </tr>
+            <tr>
+               <td class="tbl_td">3</td>
+               <td>Quantum c</td>
+               <td>Nairobi</td>
+               <td>Nakuru</td>
+               <th>500</th>
+               <th class="tbl_btn_acc1">Confirmed</th>
+            </tr>
+            <tr class="rd_tbl">
+               <td class="tbl_td">4</td>
+               <td>Mercy Chem</td>
+               <td>Nairobi</td>
+               <td>Nakuru</td>
+               <th>500</th>
+               <th class="tbl__btn_rej1">Rejected</th>
+            </tr>
+            <tr>
+               <td class="tbl_td">5</td>
+               <td>John Doe</td>
+               <td>Nairobi</td>
+               <td>Nakuru</td>
+               <th>500</th>
+               <th class="tbl__btn_rej1">Rejected</th>
+            </tr>
+         </table>
       </div>
    </body>
    <script>

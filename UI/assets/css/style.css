@@ -137,6 +137,30 @@ button:hover {
        margin-left: 20%;
     }
 }
+@media screen and (max-width: 300px) {
+    .center-content{
+        position: absolute;
+        top: 60%;
+    }
+    .center-content h2{
+        display: none;
+    }
+    
+}
+@media screen and (max-width: 600px) {
+    #fm_signup{
+        display: none;
+    }
+    #p_signup{
+        display: none; 
+    }
+    #sig_form{
+        height: 80%;
+    }
+    .center-content h2{
+        font-size: 12px;
+    }
+}
 @media screen and (max-width: 1000px) {
     #fm_signup{
         display: none;
@@ -146,5 +170,14 @@ button:hover {
     }
     #sig_form{
         height: 80%;
+    }
+    .center-content h2{
+        font-size: 15px;
+    }
+}
+@media screen and (max-width: 1200px) {
+    
+    .center-content h2{
+        font-size: 15px;
     }
 }
