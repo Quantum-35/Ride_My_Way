@@ -6,7 +6,6 @@
       <title>Ride My Way</title>
       <meta name="viewport" content="width=device-width, initial-scale=1">
       <link rel="stylesheet" type="text/css" media="screen" href="./assets/css/style.css" />
-      <script src="main.js"></script>
    </head>
    <body>
       <div class="topnav">
@@ -22,20 +21,21 @@
                <p id="fm_login" style="text-align: center">Please fill in this form to Login .</p>
                <hr>
                <label for="email"><b>Email</b></label><br>
-               <input type="text" placeholder="Enter Email" name="email" required>
+               <input type="text" id="txt_logn_email" placeholder="Enter Email" name="email" required>
                <label for="psw"><b>Password</b></label>
-               <input type="password" placeholder="Enter Password" name="psw" required>
+               <input type="password" id="txt_lgn_password" placeholder="Enter Password" name="psw" required>
                <label><br>
                <input type="checkbox" checked="checked" name="remember" style="margin-bottom:15px"> Remember me
                </label>
                <div id="log_correct_details" style="color: green"></div>
                 <div id="log_wrong_details" style="color: brown"></div>
                <div class="clearfix">
-                  <button type="button" id="btn_user_login" class="cancelbtn">Login</button><br>
+                  <button type="button" class="cancelbtn" id="btn_user_login">Login</button><br>
                   <h6><i>Not Registerd <a href="./signup.html">Signup</a></i></h6>
                </div>
             </div>
          </form>
       </div>
+      <script type="text/javascript" src="./assets/js/auth.js"></script>
    </body>
 </html>
