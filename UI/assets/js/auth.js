@@ -5,6 +5,7 @@ var signup = document.getElementById('btn_signup')
 signup.onclick= function(){
     let name = document.getElementById('txt_username').value;
     let email = document.getElementById('txt_email').value;
+    let address = document.getElementById('txt_address').value
     let password = document.getElementById('pass_pasword').value
     let confirm_pass = document.getElementById('conf_password').value
 
@@ -16,7 +17,7 @@ signup.onclick= function(){
         body: JSON.stringify({
             "username": name,
             "email": email,
-            "address": '126 kitale',
+            "address": address,
             "password": password,
             "confirm_password": confirm_pass})
     })
