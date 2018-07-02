@@ -1,5 +1,6 @@
 document.getElementById('sig_form').addEventListener('submit', sig_form);
 var signup = document.getElementById('btn_signup')
+var login = document.getElementById('btn_user_login')
 
 
 signup.onclick= function(){
@@ -22,10 +23,18 @@ signup.onclick= function(){
     })
     .then(res => res.json())
     .then(data => {
-        if(data.message === 'failed'){
-            document.getElementById('correct_details').innerHTML=data.message
+        if(data.status === 'failed'){
+            document.getElementById('wrong_details').style.display='block';
+            document.getElementById('wrong_details').innerHTML=data.message
+
+            document.getElementById('correct_details').style.display='none';
         }else{
-            document.getElementById('wrong_details').innerHTML= data.message
+            document.getElementById('correct_details').style.display='block';
+
+            document.getElementById('correct_details').innerHTML= data.message
+
+            document.getElementById('wrong_details').style.display='none';
+            redirect: window.location.replace("./login.html") 
         }
     })
 }
