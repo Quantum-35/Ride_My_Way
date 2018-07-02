@@ -2,7 +2,7 @@ document.getElementById('sig_form').addEventListener('submit', sig_form);
 var signup = document.getElementById('btn_signup')
 var login = document.getElementById('btn_user_login')
 
-
+// handles user signup
 signup.onclick= function(){
     let name = document.getElementById('txt_username').value;
     let email = document.getElementById('txt_email').value;
@@ -37,4 +37,9 @@ signup.onclick= function(){
             redirect: window.location.replace("./login.html") 
         }
     })
+}
+
+// User Login
+login.onclick = function(){
+    
 }
