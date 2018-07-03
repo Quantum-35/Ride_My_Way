@@ -27,6 +27,7 @@ usrlogin.onclick = function(){
 
             document.getElementById('log_wrong_details').style.display='none';
             window.localStorage.setItem('token', data.token)
+            console.log(data)
             redirect: window.location.replace("./Users/users.html") 
         }
     })
