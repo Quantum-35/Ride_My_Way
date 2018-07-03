@@ -28,6 +28,7 @@ usrlogin.onclick = function(){
             document.getElementById('log_wrong_details').style.display='none';
             // stores tokens to the machines local storage
             window.localStorage.setItem('token', data.token)
+            window.localStorage.setItem('username', data.username)
             redirect: window.location.replace("./Users/users.html") 
         }
     })

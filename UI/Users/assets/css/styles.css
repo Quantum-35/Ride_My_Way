@@ -519,3 +519,16 @@ ul{
   .tbl_btn_acc1{
     color: green;
   }
+  .model_name{
+      color: #008CBA;
+  }
+  .ft_ride_offers{
+      float: left;
+      border: 2px solid green;
+      padding: 1%;
+      margin-top: 2%;
+      margin-left: 3%;
+      width: 25%;
+      color: #ddd;
+  }
+  
