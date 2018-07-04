@@ -7,7 +7,6 @@
       <meta name="viewport" content="width=device-width, initial-scale=1">
       <link rel="stylesheet" type="text/css" media="screen" href="../assets/css/style.css" />
       <link rel="stylesheet" type="text/css" media="screen" href="./assets/css/styles.css" />
-      <script src="main.js"></script>
    </head>
    <body>
       <div class="topnav">
@@ -53,20 +52,25 @@
             <div class="container" id="sg_container">
                <h1 class="mk_ride_offer" id="us_offer">Make a Ride Offer</h1>
                <hr>
-               <input type="text" placeholder="Origin" name="origin" required class="form_content_font"><br>
+               <input type="text" placeholder="Car model" name="model" required class="form_content_font" id="txt_cr_carmodel"><br>
+
+               <input type="text" placeholder="Origin" name="origin" required class="form_content_font" id="txt_cr_origin"><br>
                
-               <input type="text" placeholder="Destination" name="destination" required class="form_content_font"><br>
+               <input type="text" placeholder="Destination" name="destination" required class="form_content_font" id="txt_cr_destination"><br>
                
-               <input type="text" placeholder="Time e.g 7.30am" name="depature" required class="form_content_font"><br>
+               <input type="text" placeholder="Time of depature e.g 7.30am" name="depature" required class="form_content_font" id="txt_cr_depature"><br>
                
-               <input type="text" placeholder="07xxxx" name="contact" required class="form_content_font"><br>
+               <input type="text" placeholder="Drivers name" name="name" required class="form_content_font" id="txt_cr_driversname"><br>
+                <div id="correct_details" style="color: green"></div>
+                <div id="wrong_details" style="color: brown"></div>
                <div class="clearfix">
-                  <button type="button" class="cancelbtn">Offer Ride</button><br>
+                  <button type="button" class="cancelbtn" id="btn_offer_ride">Offer Ride</button><br>
                </div>
             </div>
          </form>
       </div>
    </body>
+   <script src="./assets/js/createride.js" type="text/javascript"></script>
    <script>
       var modal = document.getElementById('myModal');
       
