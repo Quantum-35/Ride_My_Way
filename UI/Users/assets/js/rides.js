@@ -19,13 +19,16 @@ window.onload = function(){
                         <span style='color: rgba(2, 49, 49, 0.753);'>Origin: </span>${response['origin']}<br>
                         <span style='color: rgba(2, 49, 49, 0.753);'>Destination: </span>${response['destination']}<br>
                         <span style='color: rgba(2, 49, 49, 0.753);'>Driver's name: </span>${response['driver name']}<br>
-                        <button  id="detail_model_sec" class="model_details">Details</button> 
+                        <button  id="detail_model_sec" onclick='get_details()' class="model_details">Details</button> 
                         <button id='btn_join' class="model_details" onclick="alert('Thank you For choosing this car')">Join</button>
                     </div>`;
             console.log(output)
         })
         document.getElementById('center_cards').innerHTML = output;
-        
     })
     
+}
+
+function get_details(){
+    console.log('hello world')
 }
