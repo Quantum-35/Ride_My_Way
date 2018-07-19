@@ -51,6 +51,19 @@
       <div class="center-cards" id="center_cards" style="width:80%;">
          
       </div>
+      <div id="id01" class="modal1">
+        <span onclick="document.getElementById('id01').style.display='none'" class="close1" title="Close Modal">&times;</span>
+        <div class="req_header_info">Fill Request Information</div>
+        <form class="modal-content1">
+            <input type="text" name="pickup" id="req_pickuploc" placeholder="Enter Pickup Location">
+            <input type="text" name="destination" id="req_destination" placeholder="Enter your destination">
+            <input type="text" name="pickup_time" id="req_pickuptime" placeholder="Enter Pickup Time">
+            <!-- <button id='btn_req_ridejoin' class="model_details">Join</button> -->
+            <div id="correct_details" style="color: green"></div>
+            <div id="wrong_details" style="color: brown"></div>
+            <div id="btn_req_ridejoin" class="model_join">Join Ride</div>
+        </form>
+      </div>
       <div class="float_right_form">
         <h3>Popular rides:</h3><hr>
         <h5> <span>&#8605;</span> <span class="popula">Quantum35:</span>  100 Ride Offers</h5>

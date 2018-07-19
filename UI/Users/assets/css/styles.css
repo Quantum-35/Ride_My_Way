@@ -531,4 +531,87 @@ ul{
       width: 25%;
       color: #ddd;
   }
-  
+  .tbl_rowm{
+      background-color: rgba(157, 152, 117, 0.782);
+  }
+  .tbl_rows{
+      color: #66d625;
+  }
+  .tbl_td{
+      color: rgba(68, 53, 116, 0.549);
+      font-weight: bold;
+  }
+  .btn_tbl_accept{
+      width: 46%;
+      background-color: #3e8e41;
+  }
+  .btn_tbl_rej{
+      width: 46%;
+      margin-left: 3%;
+      background-color: brown;
+  }
+  .container {
+    padding: 16px;
+}
+
+/*My Custom requests model*/
+.modal1 {
+    display: none; 
+    position: fixed; 
+    z-index: 1; 
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 40%; 
+    height: 60%; 
+    overflow: auto; 
+    background-color: #44464b;
+    padding-top: 10px;
+}
+
+.modal-content1 {
+    margin: 3% auto 5% auto; 
+    width: 80%;
+}
+ 
+.close1 {
+    position: absolute;
+    right: 15px;
+    top: 5px;
+    font-size: 40px;
+    font-weight: bold;
+    color: #f1f1f1;
+}
+
+.close1:hover,
+.close1:focus {
+    color: #f44336;
+    cursor: pointer;
+}
+
+.clearfix1::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+.req_header_info{
+    color: rgb(240, 235, 235);
+    margin-left: 20%;
+    font-size: 20px;
+    margin-top: 6%;
+}
+.btn_req_join{
+    width: 50%;
+    background-color: #3e8e41;
+}
+.model_join{
+    background-color: #3e8e41;
+    text-align: center;
+    padding: 2%;
+    box-shadow: #44464b;
+    font-weight: bold;
+    color: #ddd;
+}
+.model_join:hover{
+    background-color: green;
+}

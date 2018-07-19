@@ -7,7 +7,6 @@
       <meta name="viewport" content="width=device-width, initial-scale=1">
       <link rel="stylesheet" type="text/css" media="screen" href="../assets/css/style.css" />
       <link rel="stylesheet" type="text/css" media="screen" href="./assets/css/styles.css" />
-      <script src="main.js"></script>
    </head>
    <body>
       <div class="topnav">
@@ -49,73 +48,12 @@
          </div>
       </div>
       <div class="centered-contentt">
-         <table>
-            <tr>
-               <th class="tbl_rows">#</th>
-               <th class="tbl_rows" >Passenger Name</th>
-               <th class="tbl_rows">Address</th>
-               <th class="tbl_rows">Contact</th>
-               <th class="tbl_rows">Request Time</th>
-               <th class="tbl_rows">Action</th>
-            </tr>
-            <tr>
-               <td class="tbl_td">1</td>
-               <td>Alfreds Futterkiste</td>
-               <td>12 Nairobi</td>
-               <td>071218126712</td>
-               <th>7.00am</th>
-               <td>
-                  <button class="tbl_btn_acc" >Accept</button>
-                  <button class="tbl__btn_rej">Decline</button>
-               </td>
-            </tr>
-            <tr>
-               <td class="tbl_td">2</td>
-               <td class="tbl_rows">Quantum C</td>
-               <td class="tbl_rows">12 Limuru</td>
-               <td class="tbl_rows">071218126712</td>
-               <th class="tbl_rows">7.00am</th>
-               <td>
-                  <button class="tbl_btn_acc">Accept</button>
-                  <button class="tbl__btn_rej">Decline</button>
-               </td>
-            </tr>
-            <tr>
-               <td class="tbl_td">3</td>
-               <td>Leah Ngaira</td>
-               <td>12 Ngong</td>
-               <td>071218126712</td>
-               <th>7.00am</th>
-               <td>
-                  <button class="tbl_btn_acc">Accept</button>
-                  <button class="tbl__btn_rej">Decline</button>
-               </td>
-            </tr>
-            <tr>
-               <td class="tbl_td">4</td>
-               <td class="tbl_rows">Alfreds Futterkiste</td>
-               <td class="tbl_rows">12 Nairobi</td>
-               <td class="tbl_rows">071218126712</td>
-               <th class="tbl_rows">7.00am</th>
-               <td>
-                  <button class="tbl_btn_acc">Accept</button>
-                  <button class="tbl__btn_rej">Decline</button>
-               </td>
-            </tr>
-            <tr>
-               <td class="tbl_td">3</td>
-               <td>Leah Ngaira</td>
-               <td>12 Ngong</td>
-               <td>071218126712</td>
-               <th>7.00am</th>
-               <td>
-                  <input type="button" title="Change Mind" value="Accepted" id="btn_toggle">
-                  <input type="button" title="Change Mind" value="Recall" id="bt_toggle">
-               </td>
-            </tr>
+         <table id="tbl_reqdata">
+           
          </table>
       </div>
    </body>
+   <script type="text/javascript" src="./assets/js/ride_requests.js"></script>
    <script>
       var modal = document.getElementById('myModal');
       
