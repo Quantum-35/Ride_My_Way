@@ -181,3 +181,17 @@ button:hover {
         font-size: 15px;
     }
 }
+#correct_details, #log_correct_details{
+    color: rgb(18, 19, 18);
+    background-color: green;
+}
+#wrong_details, #log_wrong_details{
+    color: rgb(201, 139, 139);
+    background-color: brown;
+}
+#correct_details, #wrong_details, #log_wrong_details, #log_correct_details{
+    z-index: 2;
+    text-align: center;
+    border-radius: 5%;
+    width: 90%;
+}
