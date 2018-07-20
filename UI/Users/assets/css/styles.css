@@ -530,6 +530,7 @@ ul{
       margin-left: 3%;
       width: 25%;
       color: #ddd;
+      background-color: gray;
   }
   .tbl_rowm{
       background-color: rgba(157, 152, 117, 0.782);

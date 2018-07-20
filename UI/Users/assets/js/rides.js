@@ -33,7 +33,6 @@ function get_details(ride_id){
         let pickup_location = document.getElementById('req_pickuploc').value;
         let req_destination = document.getElementById('req_destination').value;
         let req_pickuptime = document.getElementById('req_pickuptime').value;
-        console.log('Do you want to join?')
         fetch(`https://fix-bugs.herokuapp.com/api/v2/rides/${ride_id}/requests`,{
             method: 'POST',
             headers: {
@@ -49,18 +48,18 @@ function get_details(ride_id){
         .then(res=> res.json())
         .then(data=>{
             console.log(data)
-            // if(data.status === 'failed'){
-            //     document.getElementById('wrong_details').style.display='block';
-            //     document.getElementById('wrong_details').innerHTML=data.message
+            if(data.status === 'failed'){
+                document.getElementById('wrong_details').style.display='block';
+                document.getElementById('wrong_details').innerHTML=data.message
     
-            //     document.getElementById('correct_details').style.display='none';
-            // }else{
-            //     document.getElementById('correct_details').style.display='block';
+                document.getElementById('correct_details').style.display='none';
+            }else{
+                document.getElementById('correct_details').style.display='block';
     
-            //     document.getElementById('correct_details').innerHTML= data.message
+                document.getElementById('correct_details').innerHTML= data.message
     
-            //     document.getElementById('wrong_details').style.display='none';
-            // }
+                document.getElementById('wrong_details').style.display='none';
+            }
         })
     }
 }
