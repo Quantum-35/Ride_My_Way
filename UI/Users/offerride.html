@@ -50,19 +50,20 @@
       <div class="center-contenttt">
          <form action="" class="sign_up_form" >
             <div class="container" id="sg_container">
-               <h1 class="mk_ride_offer" id="us_offer">Make a Ride Offer</h1>
-               <hr>
-               <input type="text" placeholder="Car model" name="model" required class="form_content_font" id="txt_cr_carmodel"><br>
-
-               <input type="text" placeholder="Origin" name="origin" required class="form_content_font" id="txt_cr_origin"><br>
+               <h2 class="mk_ride_offer" id="us_offer">Make a Ride Offer</h2>
                
-               <input type="text" placeholder="Destination" name="destination" required class="form_content_font" id="txt_cr_destination"><br>
-               
-               <input type="text" placeholder="Time of depature e.g 7.30am" name="depature" required class="form_content_font" id="txt_cr_depature"><br>
-               
-               <input type="text" placeholder="Drivers name" name="name" required class="form_content_font" id="txt_cr_driversname"><br>
-                <div id="correct_details" style="color: green"></div>
+               <div id="correct_details" style="color: green"></div>
                 <div id="wrong_details" style="color: brown"></div>
+               <input type="text" placeholder="Car model" name="model" required class="form_content_font" id="txt_cr_carmodel" style="height:50px;"><br>
+
+               <input type="text" placeholder="Origin" name="origin" required class="form_content_font" id="txt_cr_origin" style="height:50px;"><br>
+               
+               <input type="text" placeholder="Destination" name="destination" required class="form_content_font" id="txt_cr_destination" style="height:50px;"><br>
+               <label for="depature" style="color:aliceblue;"><b>Time of depature e.g 07.33 PM</b></label><br>
+               <input type="time" value="07:30" name="depature" required class="form_content_font" id="txt_cr_depature" style="height:50px; width:90%;margin-bottom:2%;"><br>
+               
+               <input type="number" placeholder="Number of Seats" name="seats" required class="form_content_font" id="txt_cr_no_seats" style="height:50px; width:90%;margin-bottom:2%;">
+               <input type="text" placeholder="Drivers name" name="name" required class="form_content_font" id="txt_cr_driversname" style="height:50px;">
                <div class="clearfix">
                   <button type="button" class="cancelbtn" id="btn_offer_ride">Offer Ride</button><br>
                </div>

@@ -11,7 +11,9 @@ signup.onclick= function(){
 
     fetch('https://fix-bugs.herokuapp.com/api/v2/auth/register',{
         method: 'POST',
+        mode:'cors',
         headers: {
+            'Access-Control-Allow-Origin': '*',
             'Content-Type': 'application/json'
         },
         body: JSON.stringify({

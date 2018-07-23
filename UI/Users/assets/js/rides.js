@@ -56,7 +56,7 @@ function get_details(ride_id){
             }else{
                 document.getElementById('correct_details').style.display='block';
     
-                document.getElementById('correct_details').innerHTML= data.message
+                document.getElementById('correct_details').innerHTML= 'Request Successfully Created'
     
                 document.getElementById('wrong_details').style.display='none';
             }

@@ -5,7 +5,8 @@ offer_ride.onclick = function(){
     let origin = document.getElementById('txt_cr_origin').value;
     let destination = document.getElementById('txt_cr_destination').value;
     let depature = document.getElementById('txt_cr_depature').value;
-    let drivers_name = document.getElementById('txt_cr_driversname').value
+    let seats_num = document.getElementById('txt_cr_no_seats').value
+    let drivers_name = document.getElementById('txt_cr_driversname').value 
     fetch('https://fix-bugs.herokuapp.com/api/v2/users/rides',{
         method: 'POST',
         headers: {
@@ -17,7 +18,8 @@ offer_ride.onclick = function(){
             "depature": depature,
             "destination": destination,
             "driver_name": drivers_name,
-            "origin": origin
+            "origin": origin,
+            "seats": seats_num
         })
     })
     .then(res=> res.json())
