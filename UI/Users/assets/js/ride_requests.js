@@ -56,7 +56,12 @@ function ride_accept(ride_id, request_id){
             })
         })
         .then(res=> res.json())
-        .then(data => console.log(data))
+        .then(data => {
+            console.log(data)
+            document.getElementById('wrong_details').style.display = 'none'
+            document.getElementById('correct_details').style.display='block';
+            document.getElementById('correct_details').innerHTML = data.message
+        })
 }
 ride_reject = (ride_id, request_id) => {
     console.log('Accept ride id '+ ride_id + ' request id '+request_id)
@@ -71,5 +76,10 @@ ride_reject = (ride_id, request_id) => {
             })
         })
         .then(res=> res.json())
-        .then(data => console.log(data))
+        .then(data => {
+            console.log(data)
+            document.getElementById('correct_details').style.display = 'none'
+            document.getElementById('wrong_details').style.display='block';
+            document.getElementById('wrong_details').innerHTML = data.message
+        })
 }
