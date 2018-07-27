@@ -2,6 +2,7 @@ var usrlogin = document.getElementById('btn_user_login')
 
 // User Login
 usrlogin.onclick = function(){
+    document.getElementById('load_spinner').style.display = 'block'
     let email = document.getElementById('txt_logn_email').value;
     let password = document.getElementById('txt_lgn_password').value;
     fetch('https://fix-bugs.herokuapp.com/api/v2/auth/login', {
@@ -18,12 +19,14 @@ usrlogin.onclick = function(){
         if(data.status === 'failed'){
             document.getElementById('log_wrong_details').style.display='block';
             document.getElementById('log_wrong_details').innerHTML=data.message
+            document.getElementById('load_spinner').style.display = 'none'
 
             document.getElementById('log_correct_details').style.display='none';
         }else{
             document.getElementById('log_correct_details').style.display='block';
 
             document.getElementById('log_correct_details').innerHTML= data.message
+            document.getElementById('load_spinner').style.display = 'none'
 
             document.getElementById('log_wrong_details').style.display='none';
             // stores tokens to the machines local storage

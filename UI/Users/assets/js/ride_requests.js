@@ -61,6 +61,7 @@ function ride_accept(ride_id, request_id){
             document.getElementById('wrong_details').style.display = 'none'
             document.getElementById('correct_details').style.display='block';
             document.getElementById('correct_details').innerHTML = data.message
+            setTimeout(function(){document.getElementById('correct_details').style.display='none'}, 4000)
         })
 }
 ride_reject = (ride_id, request_id) => {
@@ -81,5 +82,6 @@ ride_reject = (ride_id, request_id) => {
             document.getElementById('correct_details').style.display = 'none'
             document.getElementById('wrong_details').style.display='block';
             document.getElementById('wrong_details').innerHTML = data.message
+            setTimeout(function(){document.getElementById('wrong_details').style.display='none'}, 4000)
         })
 }

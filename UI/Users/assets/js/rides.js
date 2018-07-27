@@ -8,6 +8,7 @@ window.onload = function(){
     })
     .then(res=>res.json())
     .then(data =>{
+        console.log(data)
         let output = '';
         data.forEach(response=>{
             // car_name.innerHTML = response['car model']
@@ -16,16 +17,18 @@ window.onload = function(){
                         <span style='color: rgba(2, 49, 49, 0.753);'>Origin: </span>${response['origin']}<br>
                         <span style='color: rgba(2, 49, 49, 0.753);'>Destination: </span>${response['destination']}<br>
                         <span style='color: rgba(2, 49, 49, 0.753);'>Driver's name: </span>${response['driver name']}<br>
-                        <button  id="detail_model_sec" onclick="alert('Hello world')" class="model_details">Details</button> 
-                        <button id='btn_join' class="model_details" onclick="get_details(${response['ride id']})">Join</button>
+                        <button  id="detail_model_sec" onclick="get_details(${response['ride id']})" class="model_details">Details</button> 
+                        <button id='btn_join' class="model_details" onclick="join_ride(${response['ride id']})">Join</button>
                     </div>`;
         })
         document.getElementById('center_cards').innerHTML = output;
+        let waiting = document.getElementById('user_ride_request')
+        waiting.style.display = 'none'
     })
     
 }
 
-function get_details(ride_id){
+function join_ride(ride_id){
     let req_modal = document.getElementById('id01')
     req_modal.style.display = 'block';
     let btn_req_joine = document.getElementById('btn_req_ridejoin')
@@ -47,7 +50,6 @@ function get_details(ride_id){
         })
         .then(res=> res.json())
         .then(data=>{
-            console.log(data)
             if(data.status === 'failed'){
                 document.getElementById('wrong_details').style.display='block';
                 document.getElementById('wrong_details').innerHTML=data.message
@@ -59,7 +61,36 @@ function get_details(ride_id){
                 document.getElementById('correct_details').innerHTML= 'Request Successfully Created'
     
                 document.getElementById('wrong_details').style.display='none';
+                setTimeout(function(){document.getElementById('id01').style.display='none'}, 2000)
             }
         })
     }
+}
+
+function get_details(ride_id){
+    document.getElementById('id02').style.display = 'block'
+    fetch(`https://fix-bugs.herokuapp.com/api/v2/rides/${ride_id}`,{
+        method: 'GET',
+        headers: {
+            'Content-Type': 'application/json',
+            'Authorization': 'Bearer '+window.localStorage.getItem('token')
+        }
+    })
+    .then(res => res.json())
+    .then(data => {
+        console.log(data)
+        document.getElementById('get_ride_loader_details').style.display = 'none'
+        let output = '';
+        // car_name.innerHTML = response['car model']
+        output += `<div class='ft_ride_details'>
+                    <h3 style='margin-left: 40%;'>Ride Details</h3> <hr>
+                    <span style='color: rgba(2, 49, 49, 0.753);'>Car model: </span>${data['car_model']} <br>
+                    <span style='color: rgba(2, 49, 49, 0.753);'>Origin: </span>${data['origin']}<br>
+                    <span style='color: rgba(2, 49, 49, 0.753);'>Destination: </span>${data['destination']}<br>
+                    <span style='color: rgba(2, 49, 49, 0.753);'>Driver's name: </span>${data['driver name']}<br>
+                    <span style='color: rgba(2, 49, 49, 0.753);'>Depature Time: </span>${data['depature']}<br>
+                    <span style='color: rgba(2, 49, 49, 0.753);'>Available Seats: </span>${data['seats']}<br>
+                </div>`;
+        document.getElementById('get_ride_details').innerHTML = output;
+    })
 }

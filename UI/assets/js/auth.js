@@ -3,6 +3,7 @@ var signup = document.getElementById('btn_signup')
 
 
 signup.onclick= function(){
+    document.getElementById('load_spinner').style.display = 'block'
     let name = document.getElementById('txt_username').value;
     let email = document.getElementById('txt_email').value;
     let address = document.getElementById('txt_address').value
@@ -28,12 +29,14 @@ signup.onclick= function(){
         if(data.status === 'failed'){
             document.getElementById('wrong_details').style.display='block';
             document.getElementById('wrong_details').innerHTML=data.message
+            document.getElementById('load_spinner').style.display = 'none'
 
             document.getElementById('correct_details').style.display='none';
         }else{
             document.getElementById('correct_details').style.display='block';
 
             document.getElementById('correct_details').innerHTML= data.message
+            document.getElementById('load_spinner').style.display = 'none'
 
             document.getElementById('wrong_details').style.display='none';
             redirect: window.location.replace("./login.html") 

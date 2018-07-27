@@ -616,3 +616,16 @@ ul{
 .model_join:hover{
     background-color: green;
 }
+.load_spinner{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.ft_ride_details{
+    background-color: #aaaaaa;
+    padding: 2%;
+    margin-top: 7%;
+    position: absolute;
+    width: 100%;
+}
