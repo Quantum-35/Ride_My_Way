@@ -84,12 +84,13 @@ function get_details(ride_id){
         // car_name.innerHTML = response['car model']
         output += `<div class='ft_ride_details'>
                     <h3 style='margin-left: 40%;'>Ride Details</h3> <hr>
-                    <span style='color: rgba(2, 49, 49, 0.753);'>Car model: </span>${data['car_model']} <br>
-                    <span style='color: rgba(2, 49, 49, 0.753);'>Origin: </span>${data['origin']}<br>
-                    <span style='color: rgba(2, 49, 49, 0.753);'>Destination: </span>${data['destination']}<br>
-                    <span style='color: rgba(2, 49, 49, 0.753);'>Driver's name: </span>${data['driver name']}<br>
-                    <span style='color: rgba(2, 49, 49, 0.753);'>Depature Time: </span>${data['depature']}<br>
-                    <span style='color: rgba(2, 49, 49, 0.753);'>Available Seats: </span>${data['seats']}<br>
+                    <span style='color: rgba(2, 49, 49, 0.753); font:30px bold;'>Car model: </span>&nbsp;${data['car_model']} <br>
+                    <span style='color: rgba(2, 49, 49, 0.753); font:30px bold;'>Origin: </span>&nbsp;${data['origin']}<br>
+                    <span style='color: rgba(2, 49, 49, 0.753); font:30px bold;'>Destination: </span>&nbsp;${data['destination']}<br>
+                    <span style='color: rgba(2, 49, 49, 0.753); font:30px bold;'>Driver's name: </span>&nbsp;${data['driver name']}<br>
+                    <span style='color: rgba(2, 49, 49, 0.753); font:30px bold;'>Depature Time: </span>&nbsp;${data['depature']} hrs<br>
+                    <span style='color: rgba(2, 49, 49, 0.753); font:30px bold;'>Available Seats: </span>&nbsp;${data['seats']}<br>
+                    <button onclick="document.getElementById('id02').style.display='none'">Close</button>
                 </div>`;
         document.getElementById('get_ride_details').innerHTML = output;
     })

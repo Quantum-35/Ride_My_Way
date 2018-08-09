@@ -8,13 +8,17 @@ window.onload = function(){
     })
     .then(res=>res.json())
     .then(data => {
-        let output = `
+        if(data.status === 'failed'){
+            document.getElementById('user_ride_request').innerHTML = '<h1 style="color:aliceblue;">You have no ride Request</h1>'
+        }
+        else{
+            let output = `
                 <tr>
                     <th class="tbl_rows">#</th>
                     <th class="tbl_rows">Destination</th>
                     <th class="tbl_rows">Pickup</th>
                     <th class="tbl_rows">Pickup Time</th>
-                    <th class="tbl_rows">Ride Id</th>
+                    <th class="tbl_rows">Status</th>
                     <th class="tbl_rows">Accepted</th>
                 </tr>
         `
@@ -27,7 +31,7 @@ window.onload = function(){
                     <td class="tbl_td">${response['destination']}</td> 
                     <td class="tbl_td">${response['pickup']}</td> 
                     <td class="tbl_td">${response['pickuptime']}</td> 
-                    <td class="tbl_td">${response['ride id']}</td> 
+                    <td class="tbl_td" id='req_status'>${response['accepted']}</td> 
                     <td class="tbl_td" style='width:5%;'>
                         <button class='btn_tbl_accept' onclick="return ride_accept(${response['ride id']}, ${response['request id']})">Accept</button>
                         <button class='btn_tbl_rej' id=btn_reject_ride onclick="return ride_reject(${response['ride id']}, ${response['request id']})")>Reject</button>
@@ -39,12 +43,12 @@ window.onload = function(){
         let waiting = document.getElementById('user_ride_request')
         waiting.style.display = 'none'
 
+        }
     })
 }
 
 
 function ride_accept(ride_id, request_id){
-    console.log('Accept ride id '+ ride_id + ' request id '+request_id)
     fetch(`https://fix-bugs.herokuapp.com/api/v2/rides/${ride_id}/requests/${request_id}`,{
             method: 'PUT',
             headers: {
@@ -57,15 +61,14 @@ function ride_accept(ride_id, request_id){
         })
         .then(res=> res.json())
         .then(data => {
-            console.log(data)
             document.getElementById('wrong_details').style.display = 'none'
             document.getElementById('correct_details').style.display='block';
             document.getElementById('correct_details').innerHTML = data.message
+            document.getElementById('req_status').innerHTML = 'Accepted'
             setTimeout(function(){document.getElementById('correct_details').style.display='none'}, 4000)
         })
 }
 ride_reject = (ride_id, request_id) => {
-    console.log('Accept ride id '+ ride_id + ' request id '+request_id)
     fetch(`https://fix-bugs.herokuapp.com/api/v2/rides/${ride_id}/requests/${request_id}`,{
             method: 'PUT',
             headers: {
@@ -82,6 +85,7 @@ ride_reject = (ride_id, request_id) => {
             document.getElementById('correct_details').style.display = 'none'
             document.getElementById('wrong_details').style.display='block';
             document.getElementById('wrong_details').innerHTML = data.message
+            document.getElementById('req_status').innerHTML = 'Rejected'
             setTimeout(function(){document.getElementById('wrong_details').style.display='none'}, 4000)
         })
 }
