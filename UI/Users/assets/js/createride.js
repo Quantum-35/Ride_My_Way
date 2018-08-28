@@ -30,12 +30,14 @@ offer_ride.onclick = function(){
             document.getElementById('wrong_details').innerHTML=data.message
 
             document.getElementById('correct_details').style.display='none';
+            setTimeout(function(){document.getElementById('wrong_details').style.display='none'}, 2000)
         }else{
             document.getElementById('correct_details').style.display='block';
 
             document.getElementById('correct_details').innerHTML= data.message
 
-            document.getElementById('wrong_details').style.display='none'; 
+            document.getElementById('wrong_details').style.display='none';
+            setTimeout(function(){document.getElementById('correct_details').style.display='none'}, 2000) 
         }
     })
 }

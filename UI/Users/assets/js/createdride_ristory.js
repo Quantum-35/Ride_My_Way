@@ -8,6 +8,11 @@ window.onload = function(){
     })
     .then(res=>res.json())
     .then(data => {
+        if (data.status == 'failed'){
+            let faided_screan = document.getElementById('user_ride_history')
+            faided_screan.innerHTML = `<h1 style="color:aliceblue;">You have Never Made Any Ride<h1>`
+        }
+
         let output = `
                 <tr>
                     <th class="tbl_rows">#</th>
@@ -37,7 +42,7 @@ window.onload = function(){
                         <img class='img_delete_ride' title="Delete Ride" src="https://res.cloudinary.com/dwzyiea6h/image/upload/v1533215216/ride%20my%20way/trash_icon.png" 
                              alt="delete icon" style='width:20px; margin-left:40%; cursor:pointer;' onclick='return delete_req(${response['ride id']})'>
                         </span>
-                    </td>  
+                    </td>
                  </tr>
             `
             document.getElementById('tbl_reqhistdata').innerHTML = output;
@@ -48,5 +53,17 @@ window.onload = function(){
 }
 
 function delete_req (ride_id){
-    console.log('Do you want to delete ride id '+ ride_id)
+	fetch(`https://fix-bugs.herokuapp.com/api/v2/users/ride/${ride_id}`,{
+        method: 'DELETE',
+        headers: {
+            'Content-Type': 'application/json',
+            'Authorization': 'Bearer '+window.localStorage.getItem('token')
+        }
+        })
+	.then(res=> res.json())
+	.then(data => {
+        console.log(data)
+        document.location.reload(true)
+    })
+
 }
